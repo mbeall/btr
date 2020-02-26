@@ -49,7 +49,7 @@ while ( have_posts() ) :
 <div class="row mt-4">
 ***REMOVED***<div class="col">
 ***REMOVED******REMOVED***<div class="alert alert-danger">
-***REMOVED******REMOVED******REMOVED***<strong>User object unavailable.</strong> Please call the ITS Help Desk at (970) 613-7777 to report this error.
+***REMOVED******REMOVED******REMOVED***<strong>User object unavailable.</strong> Please refresh the page or call the ITS Help Desk at (970) 613-7777 to report this error.
 ***REMOVED******REMOVED***</div>
 ***REMOVED***</div>
 </div>
