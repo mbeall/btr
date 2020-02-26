@@ -1,0 +1,578 @@
+/*
+Theme Name: Big Thompson River
+
+WooCommerce styles override
+*/
+***REMOVED***
+***REMOVED*** WooCommerce color variables
+***REMOVED***/
+***REMOVED***
+***REMOVED*** Imports
+***REMOVED***/
+***REMOVED***
+***REMOVED*** Shop tables
+***REMOVED***/
+***REMOVED***
+***REMOVED*** Shop tables
+***REMOVED***/
+table.shop_table_responsive thead {
+***REMOVED***display: none;
+***REMOVED***
+
+table.shop_table_responsive tbody th {
+***REMOVED***display: none;
+***REMOVED***
+
+table.shop_table_responsive tr td {
+***REMOVED***display: block;
+***REMOVED***text-align: right;
+***REMOVED***clear: both;
+***REMOVED***
+
+table.shop_table_responsive tr td:before {
+***REMOVED***content: attr(data-title) ": ";
+***REMOVED***float: left;
+***REMOVED***
+
+table.shop_table_responsive tr td.product-remove a {
+***REMOVED***text-align: left;
+***REMOVED***
+
+table.shop_table_responsive tr td.product-remove:before {
+***REMOVED***display: none;
+***REMOVED***
+
+table.shop_table_responsive tr td.actions:before, table.shop_table_responsive tr td.download-actions:before {
+***REMOVED***display: none;
+***REMOVED***
+
+table.shop_table_responsive tr td.download-actions .button {
+***REMOVED***display: block;
+***REMOVED***text-align: center;
+***REMOVED***
+
+@media screen and (min-width: 48em) {
+***REMOVED***table.shop_table_responsive thead {
+***REMOVED******REMOVED***display: table-header-group;
+***REMOVED***
+***REMOVED***table.shop_table_responsive tbody th {
+***REMOVED******REMOVED***display: table-cell;
+***REMOVED***
+***REMOVED***table.shop_table_responsive tr th, table.shop_table_responsive tr td {
+***REMOVED******REMOVED***text-align: left;
+***REMOVED***
+***REMOVED***table.shop_table_responsive tr td {
+***REMOVED******REMOVED***display: table-cell;
+***REMOVED***
+***REMOVED***table.shop_table_responsive tr td:before {
+***REMOVED******REMOVED***display: none;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Products
+***REMOVED***/
+***REMOVED***
+***REMOVED*** Products
+***REMOVED***/
+ul.products {
+***REMOVED***content: "";
+***REMOVED***display: table;
+***REMOVED***table-layout: fixed;
+***REMOVED***margin: 0;
+***REMOVED***padding: 0;
+***REMOVED***
+
+ul.products li.product {
+***REMOVED***list-style: none;
+***REMOVED***position: relative;
+***REMOVED***margin-bottom: 2em;
+***REMOVED***
+
+ul.products li.product .woocommerce-loop-product__title {
+***REMOVED***font-size: 1rem;
+***REMOVED***
+
+ul.products li.product img {
+***REMOVED***display: block;
+***REMOVED***
+
+ul.products li.product .button {
+***REMOVED***display: block;
+***REMOVED***
+
+@media screen and (min-width: 48em) {
+***REMOVED***ul.products li.product {
+***REMOVED******REMOVED***width: 30.7966666667%;
+***REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED***margin-right: 3.8%;
+***REMOVED***
+***REMOVED***ul.products li.product.first {
+***REMOVED******REMOVED***clear: both;
+***REMOVED***
+***REMOVED***ul.products li.product.last {
+***REMOVED******REMOVED***margin-right: 0;
+***REMOVED***
+***REMOVED***.columns-1 ul.products li.product {
+***REMOVED******REMOVED***float: none;
+***REMOVED******REMOVED***width: 100%;
+***REMOVED***
+***REMOVED***.columns-2 ul.products li.product {
+***REMOVED******REMOVED***width: 48.1%;
+***REMOVED***
+***REMOVED***.columns-3 ul.products li.product {
+***REMOVED******REMOVED***width: 30.7966666667%;
+***REMOVED***
+***REMOVED***.columns-4 ul.products li.product {
+***REMOVED******REMOVED***width: 22.15%;
+***REMOVED***
+***REMOVED***.columns-5 ul.products li.product {
+***REMOVED******REMOVED***width: 16.96%;
+***REMOVED***
+***REMOVED***.columns-6 ul.products li.product {
+***REMOVED******REMOVED***width: 13.4933333333%;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Single product
+***REMOVED***/
+***REMOVED***
+***REMOVED*** Single Product
+***REMOVED***/
+.single-product div.product {
+***REMOVED***content: "";
+***REMOVED***display: table;
+***REMOVED***table-layout: fixed;
+***REMOVED***position: relative;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery {
+***REMOVED***position: relative;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+***REMOVED***position: absolute;
+***REMOVED***top: 1em;
+***REMOVED***right: 1em;
+***REMOVED***display: block;
+***REMOVED***z-index: 99;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery .flex-viewport {
+***REMOVED***margin-bottom: 1em;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs {
+***REMOVED***content: "";
+***REMOVED***display: table;
+***REMOVED***table-layout: fixed;
+***REMOVED***margin: 0;
+***REMOVED***padding: 0;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
+***REMOVED***list-style: none;
+***REMOVED***cursor: pointer;
+***REMOVED***float: left;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs li img {
+***REMOVED***opacity: .5;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs li img.flex-active {
+***REMOVED***opacity: 1;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery .flex-control-thumbs li:hover img {
+***REMOVED***opacity: 1;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li {
+***REMOVED***width: 48.1%;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li:nth-child(2n) {
+***REMOVED***margin-right: 0;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li:nth-child(2n+1) {
+***REMOVED***clear: both;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li {
+***REMOVED***width: 30.7966666667%;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li:nth-child(3n) {
+***REMOVED***margin-right: 0;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li:nth-child(3n+1) {
+***REMOVED***clear: both;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li {
+***REMOVED***width: 22.15%;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li:nth-child(4n) {
+***REMOVED***margin-right: 0;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li:nth-child(4n+1) {
+***REMOVED***clear: both;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li {
+***REMOVED***width: 16.96%;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li:nth-child(5n) {
+***REMOVED***margin-right: 0;
+***REMOVED***
+
+.single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li:nth-child(5n+1) {
+***REMOVED***clear: both;
+***REMOVED***
+
+.stock:empty:before {
+***REMOVED***display: none;
+***REMOVED***
+
+.stock.in-stock {
+***REMOVED***color: #0f834d;
+***REMOVED***
+
+.stock.out-of-stock {
+***REMOVED***color: #e2401c;
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Checkout
+***REMOVED***/
+***REMOVED***
+***REMOVED*** Checkout
+***REMOVED***/
+@media screen and (min-width: 768px) {
+***REMOVED***.col2-set .form-row-first {
+***REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED***margin-right: 3.8%;
+***REMOVED***
+***REMOVED***.col2-set .form-row-last {
+***REMOVED******REMOVED***float: right;
+***REMOVED******REMOVED***margin-right: 0;
+***REMOVED***
+***REMOVED***.col2-set .form-row-first,
+***REMOVED***.col2-set .form-row-last {
+***REMOVED******REMOVED***width: 48.1%;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** General WooCommerce components
+***REMOVED***/
+***REMOVED***
+***REMOVED*** Header cart
+***REMOVED***/
+.site-header-cart {
+***REMOVED***position: relative;
+***REMOVED***margin: 0;
+***REMOVED***padding: 0;
+***REMOVED***content: "";
+***REMOVED***display: table;
+***REMOVED***table-layout: fixed;
+***REMOVED***
+
+.site-header-cart .cart-contents {
+***REMOVED***text-decoration: none;
+***REMOVED***
+
+.site-header-cart .widget_shopping_cart {
+***REMOVED***display: none;
+***REMOVED***
+
+.site-header-cart .product_list_widget {
+***REMOVED***margin: 0;
+***REMOVED***padding: 0;
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Star rating
+***REMOVED***/
+.star-rating {
+***REMOVED***overflow: hidden;
+***REMOVED***position: relative;
+***REMOVED***height: 1.618em;
+***REMOVED***line-height: 1.618;
+***REMOVED***font-size: 1em;
+***REMOVED***width: 5.3em;
+***REMOVED***font-family: 'star';
+***REMOVED***font-weight: 400;
+***REMOVED***
+
+.star-rating:before {
+***REMOVED***content: "\53\53\53\53\53";
+***REMOVED***opacity: .25;
+***REMOVED***float: left;
+***REMOVED***top: 0;
+***REMOVED***left: 0;
+***REMOVED***position: absolute;
+***REMOVED***
+
+.star-rating span {
+***REMOVED***overflow: hidden;
+***REMOVED***float: left;
+***REMOVED***top: 0;
+***REMOVED***left: 0;
+***REMOVED***position: absolute;
+***REMOVED***padding-top: 1.5em;
+***REMOVED***
+
+.star-rating span:before {
+***REMOVED***content: "\53\53\53\53\53";
+***REMOVED***top: 0;
+***REMOVED***position: absolute;
+***REMOVED***left: 0;
+***REMOVED***color: royalblue;
+***REMOVED***
+
+p.stars a {
+***REMOVED***position: relative;
+***REMOVED***height: 1em;
+***REMOVED***width: 1em;
+***REMOVED***text-indent: -999em;
+***REMOVED***display: inline-block;
+***REMOVED***text-decoration: none;
+***REMOVED***margin-right: 1px;
+***REMOVED***font-weight: 400;
+***REMOVED***
+
+p.stars a:before {
+***REMOVED***display: block;
+***REMOVED***position: absolute;
+***REMOVED***top: 0;
+***REMOVED***left: 0;
+***REMOVED***width: 1em;
+***REMOVED***height: 1em;
+***REMOVED***line-height: 1;
+***REMOVED***font-family: "star";
+***REMOVED***content: "\53";
+***REMOVED***color: #404040;
+***REMOVED***text-indent: 0;
+***REMOVED***opacity: .25;
+***REMOVED***
+
+p.stars a:hover ~ a:before {
+***REMOVED***content: "\53";
+***REMOVED***color: #404040;
+***REMOVED***opacity: .25;
+***REMOVED***
+
+p.stars:hover a:before {
+***REMOVED***content: "\53";
+***REMOVED***color: royalblue;
+***REMOVED***opacity: 1;
+***REMOVED***
+
+p.stars.selected a.active:before {
+***REMOVED***content: "\53";
+***REMOVED***color: royalblue;
+***REMOVED***opacity: 1;
+***REMOVED***
+
+p.stars.selected a.active ~ a:before {
+***REMOVED***content: "\53";
+***REMOVED***color: #404040;
+***REMOVED***opacity: .25;
+***REMOVED***
+
+p.stars.selected a:not(.active):before {
+***REMOVED***content: "\53";
+***REMOVED***color: royalblue;
+***REMOVED***opacity: 1;
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Tabs
+***REMOVED***/
+.woocommerce-tabs ul.tabs {
+***REMOVED***list-style: none;
+***REMOVED***margin: 0;
+***REMOVED***padding: 0;
+***REMOVED***text-align: left;
+***REMOVED***
+
+.woocommerce-tabs ul.tabs li {
+***REMOVED***display: block;
+***REMOVED***margin: 0;
+***REMOVED***position: relative;
+***REMOVED***
+
+.woocommerce-tabs ul.tabs li a {
+***REMOVED***padding: 1em 0;
+***REMOVED***display: block;
+***REMOVED***
+
+.woocommerce-tabs .panel h2:first-of-type {
+***REMOVED***margin-bottom: 1em;
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Password strength meter
+***REMOVED***/
+.woocommerce-password-strength {
+***REMOVED***text-align: right;
+***REMOVED***
+
+.woocommerce-password-strength.strong {
+***REMOVED***color: #0f834d;
+***REMOVED***
+
+.woocommerce-password-strength.short {
+***REMOVED***color: #e2401c;
+***REMOVED***
+
+.woocommerce-password-strength.bad {
+***REMOVED***color: #e2401c;
+***REMOVED***
+
+.woocommerce-password-strength.good {
+***REMOVED***color: #3D9CD2;
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Forms
+***REMOVED***/
+.form-row.woocommerce-validated input.input-text {
+***REMOVED***box-shadow: inset 2px 0 0 #0f834d;
+***REMOVED***
+
+.form-row.woocommerce-invalid input.input-text {
+***REMOVED***box-shadow: inset 2px 0 0 #e2401c;
+***REMOVED***
+
+.required {
+***REMOVED***color: red;
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Notices
+***REMOVED***/
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
+p.no-comments {
+***REMOVED***content: "";
+***REMOVED***display: table;
+***REMOVED***table-layout: fixed;
+***REMOVED***background-color: #0f834d;
+***REMOVED***clear: both;
+***REMOVED***
+
+.woocommerce-info,
+.woocommerce-noreviews,
+p.no-comments {
+***REMOVED***background-color: #3D9CD2;
+***REMOVED***
+
+.woocommerce-error {
+***REMOVED***background-color: #e2401c;
+***REMOVED***
+
+.demo_store {
+***REMOVED***position: fixed;
+***REMOVED***left: 0;
+***REMOVED***bottom: 0;
+***REMOVED***right: 0;
+***REMOVED***margin: 0;
+***REMOVED***padding: 1em;
+***REMOVED***background-color: #3D9CD2;
+***REMOVED***z-index: 9999;
+***REMOVED***
+
+@media screen and (min-width: 48em) {
+***REMOVED******REMOVED***
+***REMOVED******REMOVED*** Header cart
+***REMOVED******REMOVED***/
+***REMOVED***.site-header-cart .widget_shopping_cart {
+***REMOVED******REMOVED***position: absolute;
+***REMOVED******REMOVED***top: 100%;
+***REMOVED******REMOVED***width: 100%;
+***REMOVED******REMOVED***z-index: 999999;
+***REMOVED******REMOVED***left: -999em;
+***REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED***box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+***REMOVED***
+***REMOVED***.site-header-cart:hover .widget_shopping_cart, .site-header-cart.focus .widget_shopping_cart {
+***REMOVED******REMOVED***left: 0;
+***REMOVED******REMOVED***display: block;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** WooCommerce widgets
+***REMOVED***/
+***REMOVED***
+***REMOVED*** WooCommerce Price Filter
+***REMOVED***/
+.widget_price_filter .price_slider {
+***REMOVED***margin-bottom: 1.5em;
+***REMOVED***
+
+.widget_price_filter .price_slider_amount {
+***REMOVED***text-align: right;
+***REMOVED***line-height: 2.4em;
+***REMOVED***
+
+.widget_price_filter .price_slider_amount .button {
+***REMOVED***float: left;
+***REMOVED***
+
+.widget_price_filter .ui-slider {
+***REMOVED***position: relative;
+***REMOVED***text-align: left;
+***REMOVED***
+
+.widget_price_filter .ui-slider .ui-slider-handle {
+***REMOVED***position: absolute;
+***REMOVED***z-index: 2;
+***REMOVED***width: 1em;
+***REMOVED***height: 1em;
+***REMOVED***cursor: ew-resize;
+***REMOVED***outline: none;
+***REMOVED***background: royalblue;
+***REMOVED***box-sizing: border-box;
+***REMOVED***margin-top: -.25em;
+***REMOVED***opacity: 1;
+***REMOVED***
+
+.widget_price_filter .ui-slider .ui-slider-handle:last-child {
+***REMOVED***margin-left: -1em;
+***REMOVED***
+
+.widget_price_filter .ui-slider .ui-slider-handle:hover, .widget_price_filter .ui-slider .ui-slider-handle.ui-state-active {
+***REMOVED***box-shadow: 0 0 0 0.25em rgba(0, 0, 0, 0.1);
+***REMOVED***
+
+.widget_price_filter .ui-slider .ui-slider-range {
+***REMOVED***position: absolute;
+***REMOVED***z-index: 1;
+***REMOVED***display: block;
+***REMOVED***border: 0;
+***REMOVED***background: royalblue;
+***REMOVED***
+
+.widget_price_filter .price_slider_wrapper .ui-widget-content {
+***REMOVED***background: rgba(0, 0, 0, 0.1);
+***REMOVED***
+
+.widget_price_filter .ui-slider-horizontal {
+***REMOVED***height: .5em;
+***REMOVED***
+
+.widget_price_filter .ui-slider-horizontal .ui-slider-range {
+***REMOVED***height: 100%;
+***REMOVED***

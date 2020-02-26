@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Theme Coding Standards">
+***REMOVED***<!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
+***REMOVED***<!-- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards -->
+***REMOVED***<!-- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki -->
+***REMOVED***<!-- See https://github.com/wimg/PHPCompatibility -->
+
+***REMOVED***<!-- Set a description for this ruleset. -->
+***REMOVED***<description>A custom set of code standard rules to check for WordPress themes.</description>
+
+
+***REMOVED***<!--
+***REMOVED***#############################################################################
+***REMOVED***COMMAND LINE ARGUMENTS
+***REMOVED***https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml
+***REMOVED***#############################################################################
+***REMOVED***-->
+
+***REMOVED***<!-- Pass some flags to PHPCS:
+***REMOVED******REMOVED*** p flag: Show progress of the run.
+***REMOVED******REMOVED*** s flag: Show sniff codes in all reports.
+***REMOVED***-->
+***REMOVED***<arg value="ps"/>
+
+***REMOVED***<!-- Strip the filepaths down to the relevant bit. -->
+***REMOVED***<arg name="basepath" value="./"/>
+
+***REMOVED***<!-- Check up to 8 files simultanously. -->
+***REMOVED***<arg name="parallel" value="8"/>
+
+***REMOVED***<!-- Only check the PHP, CSS and SCSS files. JS files are checked separately with JSCS and JSHint. -->
+***REMOVED***<arg name="extensions" value="php,css,scss/css"/>
+
+***REMOVED***<!-- Check all files in this directory and the directories below it. -->
+***REMOVED***<file>.</file>
+
+
+***REMOVED***<!--
+***REMOVED***#############################################################################
+***REMOVED***USE THE WordPress RULESET
+***REMOVED***#############################################################################
+***REMOVED***-->
+
+***REMOVED***<rule ref="WordPress"/>
+
+
+***REMOVED***<!--
+***REMOVED***#############################################################################
+***REMOVED***SNIFF SPECIFIC CONFIGURATION
+***REMOVED***#############################################################################
+***REMOVED***-->
+
+***REMOVED***<!-- Verify that the text_domain is set to the desired text-domain.
+***REMOVED******REMOVED*** Multiple valid text domains can be provided as a comma-delimited list. -->
+***REMOVED***<rule ref="WordPress.WP.I18n">
+***REMOVED******REMOVED***<properties>
+***REMOVED******REMOVED******REMOVED***<property name="text_domain" type="array" value="_s"/>
+***REMOVED******REMOVED***</properties>
+***REMOVED***</rule>
+
+***REMOVED***<!-- Allow for theme specific exceptions to the file name rules based
+***REMOVED******REMOVED*** on the theme hierarchy. -->
+***REMOVED***<rule ref="WordPress.Files.FileName">
+***REMOVED******REMOVED***<properties>
+***REMOVED******REMOVED******REMOVED***<property name="is_theme" value="true"/>
+***REMOVED******REMOVED***</properties>
+***REMOVED***</rule>
+
+***REMOVED***<!-- Set the minimum supported WP version. This is used by several sniffs.
+***REMOVED******REMOVED*** The minimum version set here should be in line with the minimum WP version
+***REMOVED******REMOVED*** as set in the "Requires at least" tag in the readme.txt file. -->
+***REMOVED***<config name="minimum_supported_wp_version" value="4.5"/>
+
+***REMOVED***<rule ref="WordPress.Arrays.MultipleStatementAlignment">
+***REMOVED******REMOVED***<properties>
+***REMOVED******REMOVED******REMOVED***<!-- No need to adjust alignment of large arrays when the item with the largest key is removed. -->
+***REMOVED******REMOVED******REMOVED***<property name="exact" value="false"/>
+***REMOVED******REMOVED******REMOVED***<!-- Don't align multi-line items if ALL items in the array are multi-line. -->
+***REMOVED******REMOVED******REMOVED***<property name="alignMultilineItems" value="!=100"/>
+***REMOVED******REMOVED******REMOVED***<!-- Array assignment operator should always be on the same line as the array key. -->
+***REMOVED******REMOVED******REMOVED***<property name="ignoreNewlines" value="false"/>
+***REMOVED******REMOVED***</properties>
+***REMOVED***</rule>
+
+***REMOVED***<!-- Verify that everything in the global namespace is prefixed with a theme specific prefix.
+***REMOVED******REMOVED*** Multiple valid prefixes can be provided as a comma-delimited list. -->
+***REMOVED***<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+***REMOVED******REMOVED***<properties>
+***REMOVED******REMOVED******REMOVED***<property name="prefixes" type="array" value="_s" />
+***REMOVED******REMOVED***</properties>
+***REMOVED***</rule>
+
+
+***REMOVED***<!--
+***REMOVED***#############################################################################
+***REMOVED***USE THE PHPCompatibility RULESET
+***REMOVED***#############################################################################
+***REMOVED***-->
+
+
+***REMOVED***<config name="testVersion" value="5.2-99.0"/>
+***REMOVED***<rule ref="PHPCompatibility">
+***REMOVED******REMOVED***<!-- Whitelist PHP native classes, interfaces, functions and constants which
+***REMOVED******REMOVED******REMOVED*** are back-filled by WP.
+
+***REMOVED******REMOVED******REMOVED*** Based on:
+***REMOVED******REMOVED******REMOVED******REMOVED*** /wp-includes/compat.php
+***REMOVED******REMOVED******REMOVED******REMOVED*** /wp-includes/random_compat/random.php
+***REMOVED******REMOVED***-->
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewClasses.errorFound"/>
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewClasses.typeerrorFound"/>
+
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewConstants.json_pretty_printFound"/>
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewConstants.php_version_idFound"/>
+
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewFunctions.hash_equalsFound"/>
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewFunctions.json_last_error_msgFound"/>
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewFunctions.random_intFound"/>
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewFunctions.random_bytesFound"/>
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewFunctions.array_replace_recursiveFound"/>
+
+***REMOVED******REMOVED***<exclude name="PHPCompatibility.PHP.NewInterfaces.jsonserializableFound"/>
+***REMOVED***</rule>
+
+***REMOVED***<!-- Whitelist the WP Core mysql_to_rfc3339() function. -->
+***REMOVED***<rule ref="PHPCompatibility.PHP.RemovedExtensions">
+***REMOVED******REMOVED***<properties>
+***REMOVED******REMOVED******REMOVED***<property name="functionWhitelist" type="array" value="mysql_to_rfc3339"/>
+***REMOVED******REMOVED***</properties>
+***REMOVED***</rule>
+
+</ruleset>

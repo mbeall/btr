@@ -1,0 +1,48 @@
+/*
+Theme Name: Big Thompson River
+
+WooCommerce styles override
+*/
+
+***REMOVED***
+***REMOVED*** WooCommerce color variables
+***REMOVED***/
+$woocommerce__color-error: #e2401c;
+$woocommerce__color-success: #0f834d;
+$woocommerce__color-info: #3D9CD2;
+
+***REMOVED***
+***REMOVED*** Imports
+***REMOVED***/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+***REMOVED***
+***REMOVED*** Shop tables
+***REMOVED***/
+@import "shop/tables";
+
+***REMOVED***
+***REMOVED*** Products
+***REMOVED***/
+@import "shop/products";
+
+***REMOVED***
+***REMOVED*** Single product
+***REMOVED***/
+@import "shop/single-product";
+
+***REMOVED***
+***REMOVED*** Checkout
+***REMOVED***/
+@import "shop/checkout";
+
+***REMOVED***
+***REMOVED*** General WooCommerce components
+***REMOVED***/
+@import "shop/components";
+
+***REMOVED***
+***REMOVED*** WooCommerce widgets
+***REMOVED***/
+@import "shop/widgets";

@@ -1,0 +1,29 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+***REMOVED***font-size: ($sizeValue***REMOVED*** 16)***REMOVED*** 1px;
+***REMOVED***font-size: $sizeValue***REMOVED*** 1rem;
+***REMOVED***
+
+// Center block
+@mixin center-block {
+***REMOVED***display: block;
+***REMOVED***margin-left: auto;
+***REMOVED***margin-right: auto;
+***REMOVED***
+
+// Clearfix
+@mixin clearfix() {
+***REMOVED***content: "";
+***REMOVED***display: table;
+***REMOVED***table-layout: fixed;
+***REMOVED***
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+***REMOVED***clear: both;
+***REMOVED***
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+***REMOVED***width: map-get( $columns, $numberColumns ) - ( ( $columns__margin***REMOVED*** ( $numberColumns - 1 ) ) / $numberColumns );
+***REMOVED***

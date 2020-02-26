@@ -1,0 +1,107 @@
+.main-navigation {
+***REMOVED***clear: both;
+***REMOVED***display: block;
+***REMOVED***float: left;
+***REMOVED***width: 100%;
+
+***REMOVED***ul {
+***REMOVED******REMOVED***display: none;
+***REMOVED******REMOVED***list-style: none;
+***REMOVED******REMOVED***margin: 0;
+***REMOVED******REMOVED***padding-left: 0;
+
+***REMOVED******REMOVED***ul {
+***REMOVED******REMOVED******REMOVED***box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+***REMOVED******REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED******REMOVED***position: absolute;
+***REMOVED******REMOVED******REMOVED***top: 100%;
+***REMOVED******REMOVED******REMOVED***left: -999em;
+***REMOVED******REMOVED******REMOVED***z-index: 99999;
+
+***REMOVED******REMOVED******REMOVED***ul {
+***REMOVED******REMOVED******REMOVED******REMOVED***left: -999em;
+***REMOVED******REMOVED******REMOVED******REMOVED***top: 0;
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***li {
+***REMOVED******REMOVED******REMOVED******REMOVED***&:hover > ul,
+***REMOVED******REMOVED******REMOVED******REMOVED***&.focus > ul {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***left: 100%;
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***a {
+***REMOVED******REMOVED******REMOVED******REMOVED***width: 200px;
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***:hover > a,
+***REMOVED******REMOVED******REMOVED***.focus > a {
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***a:hover,
+***REMOVED******REMOVED******REMOVED***a.focus {
+***REMOVED******REMOVED***
+***REMOVED***
+
+***REMOVED******REMOVED***li:hover > ul,
+***REMOVED******REMOVED***li.focus > ul {
+***REMOVED******REMOVED******REMOVED***left: auto;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***li {
+***REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED***position: relative;
+
+***REMOVED******REMOVED***&:hover > a,
+***REMOVED******REMOVED***&.focus > a {
+***REMOVED***
+***REMOVED***
+
+***REMOVED***a {
+***REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED***text-decoration: none;
+***REMOVED***
+
+***REMOVED***.current_page_item > a,
+***REMOVED***.current-menu-item > a,
+***REMOVED***.current_page_ancestor > a,
+***REMOVED***.current-menu-ancestor > a {
+***REMOVED***
+***REMOVED***
+
+/* Small menu.***REMOVED***/
+.menu-toggle,
+.main-navigation.toggled ul {
+***REMOVED***display: block;
+***REMOVED***
+
+@media screen and (min-width: 37.5em) {
+***REMOVED***.menu-toggle {
+***REMOVED******REMOVED***display: none;
+***REMOVED***
+***REMOVED***.main-navigation ul {
+***REMOVED******REMOVED***display: block;
+***REMOVED***
+***REMOVED***
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+***REMOVED***.site-main & {
+***REMOVED******REMOVED***margin: 0 0 1.5em;
+***REMOVED******REMOVED***overflow: hidden;
+***REMOVED***
+
+***REMOVED***.nav-previous {
+***REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED***width: 50%;
+***REMOVED***
+
+***REMOVED***.nav-next {
+***REMOVED******REMOVED***float: right;
+***REMOVED******REMOVED***text-align: right;
+***REMOVED******REMOVED***width: 50%;
+***REMOVED***
+***REMOVED***

@@ -1,0 +1,22 @@
+.content-area {
+***REMOVED***float: right;
+***REMOVED***margin: 0 0 0 (-$size__site-sidebar);
+***REMOVED***width: $size__site-main;
+***REMOVED***
+
+.site-main {
+***REMOVED***margin: 0 0 0 $size__site-sidebar;
+***REMOVED***
+
+.site-content .widget-area {
+***REMOVED***float: left;
+***REMOVED***overflow: hidden;
+***REMOVED***width: $size__site-sidebar;
+***REMOVED***
+
+.site-footer {
+***REMOVED***clear: both;
+***REMOVED***width: $size__site-main;
+***REMOVED***
+
+@import "no-sidebar";

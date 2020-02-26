@@ -1,0 +1,22 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+***REMOVED***border: 1px solid;
+***REMOVED***border-color: $color__border-button;
+***REMOVED***border-radius: 3px;
+***REMOVED***background: $color__background-button;
+***REMOVED***color: rgba(0, 0, 0, .8);
+***REMOVED***@include font-size(0.75);
+***REMOVED***line-height: 1;
+***REMOVED***padding: .6em 1em .4em;
+
+***REMOVED***&:hover {
+***REMOVED******REMOVED***border-color: $color__border-button-hover;
+***REMOVED***
+
+***REMOVED***&:active,
+***REMOVED***&:focus {
+***REMOVED******REMOVED***border-color: $color__border-button-focus;
+***REMOVED***
+***REMOVED***

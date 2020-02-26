@@ -1,0 +1,923 @@
+/*!
+Theme Name: Big Thompson River
+Theme URI: http://underscores.me/
+Author: Thompson School District
+Author URI: http://underscores.me/
+Description: A WordPress theme for the Thompson School District ITS Help Desk and other Innovative Technology Services resources.
+Version: 1.0.0a
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bigt
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Big Thompson River is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+***REMOVED***## Links
+***REMOVED***## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+***REMOVED***## Posts and pages
+***REMOVED***## Comments
+# Infinite scroll
+# Media
+***REMOVED***## Captions
+***REMOVED***## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css***REMOVED***/
+
+/* Document
+***REMOVED*** ==========================================================================***REMOVED***/
+
+***REMOVED***
+***REMOVED*** 1. Correct the line height in all browsers.
+***REMOVED*** 2. Prevent adjustments of font size after orientation changes in iOS.
+***REMOVED***/
+
+html {
+***REMOVED***
+
+/* Sections
+***REMOVED*** ==========================================================================***REMOVED***/
+
+***REMOVED***
+***REMOVED*** Remove the margin in all browsers.
+***REMOVED***/
+
+body {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Correct the font size and margin on `h1` elements within `section` and
+***REMOVED*** `article` contexts in Chrome, Firefox, and Safari.
+***REMOVED***/
+
+h1 {
+***REMOVED***
+
+/* Grouping content
+***REMOVED*** ==========================================================================***REMOVED***/
+
+***REMOVED***
+***REMOVED*** 1. Add the correct box sizing in Firefox.
+***REMOVED*** 2. Show the overflow in Edge and IE.
+***REMOVED***/
+
+hr {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** 1. Correct the inheritance and scaling of font size in all browsers.
+***REMOVED*** 2. Correct the odd `em` font sizing in all browsers.
+***REMOVED***/
+
+pre {
+***REMOVED***
+
+/* Text-level semantics
+***REMOVED*** ==========================================================================***REMOVED***/
+
+***REMOVED***
+***REMOVED*** Remove the gray background on active links in IE 10.
+***REMOVED***/
+
+a {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** 1. Remove the bottom border in Chrome 57-
+***REMOVED*** 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+***REMOVED***/
+
+abbr[title] {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Add the correct font weight in Chrome, Edge, and Safari.
+***REMOVED***/
+
+b,
+strong {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** 1. Correct the inheritance and scaling of font size in all browsers.
+***REMOVED*** 2. Correct the odd `em` font sizing in all browsers.
+***REMOVED***/
+
+code,
+kbd,
+samp {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Add the correct font size in all browsers.
+***REMOVED***/
+
+small {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Prevent `sub` and `sup` elements from affecting the line height in
+***REMOVED*** all browsers.
+***REMOVED***/
+
+sub,
+sup {
+***REMOVED***
+
+sub {
+***REMOVED***
+
+sup {
+***REMOVED***
+
+/* Embedded content
+***REMOVED*** ==========================================================================***REMOVED***/
+
+***REMOVED***
+***REMOVED*** Remove the border on images inside links in IE 10.
+***REMOVED***/
+
+img {
+***REMOVED***
+
+/* Forms
+***REMOVED*** ==========================================================================***REMOVED***/
+
+***REMOVED***
+***REMOVED*** 1. Change the font styles in all browsers.
+***REMOVED*** 2. Remove the margin in Firefox and Safari.
+***REMOVED***/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Show the overflow in IE.
+***REMOVED*** 1. Show the overflow in Edge.
+***REMOVED***/
+
+button,
+input { /* 1***REMOVED***/
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Remove the inheritance of text transform in Edge, Firefox, and IE.
+***REMOVED*** 1. Remove the inheritance of text transform in Firefox.
+***REMOVED***/
+
+button,
+select { /* 1***REMOVED***/
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Correct the inability to style clickable types in iOS and Safari.
+***REMOVED***/
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Remove the inner border and padding in Firefox.
+***REMOVED***/
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Restore the focus styles unset by the previous rule.
+***REMOVED***/
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Correct the padding in Firefox.
+***REMOVED***/
+
+fieldset {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** 1. Correct the text wrapping in Edge and IE.
+***REMOVED*** 2. Correct the color inheritance from `fieldset` elements in IE.
+***REMOVED*** 3. Remove the padding so developers are not caught out when they zero out
+***REMOVED******REMOVED******REMOVED***`fieldset` elements in all browsers.
+***REMOVED***/
+
+legend {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Add the correct vertical alignment in Chrome, Firefox, and Opera.
+***REMOVED***/
+
+progress {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Remove the default vertical scrollbar in IE 10+.
+***REMOVED***/
+
+textarea {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** 1. Add the correct box sizing in IE 10.
+***REMOVED*** 2. Remove the padding in IE 10.
+***REMOVED***/
+
+[type="checkbox"],
+[type="radio"] {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Correct the cursor style of increment and decrement buttons in Chrome.
+***REMOVED***/
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** 1. Correct the odd appearance in Chrome and Safari.
+***REMOVED*** 2. Correct the outline style in Safari.
+***REMOVED***/
+
+[type="search"] {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Remove the inner padding in Chrome and Safari on macOS.
+***REMOVED***/
+
+[type="search"]::-webkit-search-decoration {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** 1. Correct the inability to style clickable types in iOS and Safari.
+***REMOVED*** 2. Change font properties to `inherit` in Safari.
+***REMOVED***/
+
+::-webkit-file-upload-button {
+***REMOVED***
+
+/* Interactive
+***REMOVED*** ==========================================================================***REMOVED***/
+
+/*
+***REMOVED*** Add the correct display in Edge, IE 10+, and Firefox.
+***REMOVED***/
+
+details {
+***REMOVED***
+
+/*
+***REMOVED*** Add the correct display in all browsers.
+***REMOVED***/
+
+summary {
+***REMOVED***
+
+/* Misc
+***REMOVED*** ==========================================================================***REMOVED***/
+
+***REMOVED***
+***REMOVED*** Add the correct display in IE 10+.
+***REMOVED***/
+
+template {
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Add the correct display in IE 10.
+***REMOVED***/
+
+[hidden] {
+***REMOVED***
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+***REMOVED***
+
+h1, h2, h3, h4, h5, h6 {
+***REMOVED***
+
+p {
+***REMOVED***
+
+dfn, cite, em, i {
+***REMOVED***
+
+blockquote {
+***REMOVED***
+
+address {
+***REMOVED***
+
+pre {
+***REMOVED***
+
+code, kbd, tt, var {
+***REMOVED***
+
+abbr, acronym {
+***REMOVED***
+
+mark, ins {
+***REMOVED***
+
+big {
+***REMOVED***
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+***REMOVED***
+
+*,
+*:before,
+*:after {
+***REMOVED***
+
+body {
+***REMOVED***
+
+hr {
+***REMOVED***
+
+ul, ol {
+***REMOVED***
+
+ul {
+***REMOVED***
+
+ol {
+***REMOVED***
+
+li > ul,
+li > ol {
+***REMOVED***
+
+dt {
+***REMOVED***
+
+dd {
+***REMOVED***
+
+img {
+***REMOVED***
+
+figure {
+***REMOVED***
+
+table {
+***REMOVED***
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+***REMOVED***
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+***REMOVED***
+
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+***REMOVED***
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+***REMOVED***
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+***REMOVED***
+
+select {
+***REMOVED***
+
+textarea {
+***REMOVED***
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.navbar-primary {
+***REMOVED***background: #333399;
+***REMOVED***
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers.***REMOVED***/
+.screen-reader-text {
+***REMOVED***border: 0;
+***REMOVED***clip: rect(1px, 1px, 1px, 1px);
+***REMOVED***clip-path: inset(50%);
+***REMOVED***height: 1px;
+***REMOVED***margin: -1px;
+***REMOVED***overflow: hidden;
+***REMOVED***padding: 0;
+***REMOVED***position: absolute !important;
+***REMOVED***width: 1px;
+***REMOVED***word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually.***REMOVED***/
+***REMOVED***
+
+.screen-reader-text:focus {
+***REMOVED***background-color: #f1f1f1;
+***REMOVED***border-radius: 3px;
+***REMOVED***box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+***REMOVED***clip: auto !important;
+***REMOVED***clip-path: none;
+***REMOVED***color: #21759b;
+***REMOVED***display: block;
+***REMOVED***font-size: 14px;
+***REMOVED***font-size: 0.875rem;
+***REMOVED***font-weight: bold;
+***REMOVED***height: auto;
+***REMOVED***left: 5px;
+***REMOVED***line-height: normal;
+***REMOVED***padding: 15px 23px 14px;
+***REMOVED***text-decoration: none;
+***REMOVED***top: 5px;
+***REMOVED***width: auto;
+***REMOVED***z-index: 100000;
+***REMOVED***/* Above WP toolbar.***REMOVED***/
+***REMOVED***
+
+/* Do not show the outline on the skip link target.***REMOVED***/
+#content[tabindex="-1"]:focus {
+***REMOVED***outline: 0;
+***REMOVED***
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+***REMOVED***
+
+.widget select {
+***REMOVED***
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+***REMOVED***
+
+.wp-caption img[class*="wp-image-"] {
+***REMOVED***
+
+.wp-caption .wp-caption-text {
+***REMOVED***
+
+.wp-caption-text {
+***REMOVED***
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+***REMOVED***
+
+.gallery-item {
+***REMOVED***
+
+.gallery-columns-2 .gallery-item {
+***REMOVED***max-width: 50%;
+***REMOVED***
+
+.gallery-columns-3 .gallery-item {
+***REMOVED***max-width: 33.33%;
+***REMOVED***
+
+.gallery-columns-4 .gallery-item {
+***REMOVED***max-width: 25%;
+***REMOVED***
+
+.gallery-columns-5 .gallery-item {
+***REMOVED***max-width: 20%;
+***REMOVED***
+
+.gallery-columns-6 .gallery-item {
+***REMOVED***max-width: 16.66%;
+***REMOVED***
+
+.gallery-columns-7 .gallery-item {
+***REMOVED***max-width: 14.28%;
+***REMOVED***
+
+.gallery-columns-8 .gallery-item {
+***REMOVED***max-width: 12.5%;
+***REMOVED***
+
+.gallery-columns-9 .gallery-item {
+***REMOVED***max-width: 11.11%;
+***REMOVED***
+
+.gallery-caption {
+***REMOVED***display: block;
+***REMOVED***
+
+a,
+.btn-link {
+***REMOVED***color: #333399;
+***REMOVED***
+a:hover,
+.btn-link:hover {
+***REMOVED***color: #29297c;
+***REMOVED***
+
+.bg-tsd {
+***REMOVED***background-color: #333399 !important;
+***REMOVED***
+.btn-tsd {
+  color: #fff;
+  background-color: #333399;
+  border-color: #333399;
+***REMOVED***
+.btn-tsd-outline {
+  color: #333399;
+  background-color: #fff;
+  border-color: #333399;
+***REMOVED***
+.btn-tsd:hover,
+.btn-tsd-outline:hover {
+  color: #fff;
+  background-color: #29297c;
+  border-color: #262673;
+***REMOVED***
+.jumbotron-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+***REMOVED***
+.text-white a {
+  color: #fff;
+***REMOVED***
+a.stretched-link {
+  text-decoration:  none;
+***REMOVED***
+.card-tsd-outline {
+  color: #333399;
+  background-color: #fff;
+  border-color: #333399;
+***REMOVED***
+.bg-tsd .cw-link:hover,
+.card-tsd-outline:hover { 
+  color: #fff;
+  background-color: #29297c;
+  border-color: #262673;
+***REMOVED***
+.bg-orange .cw-link:hover { 
+  color: #fff;
+  background-color: #c35a02;
+  border-color: #c35a02;
+***REMOVED***
+.card-tsd-outline:hover a {
+  color: #fff;
+***REMOVED***
+
+/* Orange***REMOVED***/
+.table-orange,
+.table-orange>th,
+.table-orange>td {
+***REMOVED***background-color: #fedbbd
+***REMOVED***
+
+.table-orange th,
+.table-orange td,
+.table-orange thead th,
+.table-orange tbody+tbody {
+***REMOVED***border-color: #febc85
+***REMOVED***
+
+.table-hover .table-orange:hover {
+***REMOVED***background-color: #fecda4
+***REMOVED***
+
+.table-hover .table-orange:hover>td,
+.table-hover .table-orange:hover>th {
+***REMOVED***background-color: #fecda4
+***REMOVED***
+
+.btn-orange {
+***REMOVED***color: #fff;
+***REMOVED***background-color: #fd7e14;
+***REMOVED***border-color: #fd7e14
+***REMOVED***
+
+.btn-orange:hover {
+***REMOVED***color: #fff;
+***REMOVED***background-color: #c35a02;
+***REMOVED***border-color: #c35a02
+***REMOVED***
+
+.btn-orange:focus,
+.btn-orange.focus {
+***REMOVED***box-shadow: 0 0 0 .2rem rgba(38, 143, 255, 0.5)
+***REMOVED***
+
+.btn-orange.disabled,
+.btn-orange:disabled {
+***REMOVED***color: #fff;
+***REMOVED***background-color: #fd7e14;
+***REMOVED***border-color: #fd7e14
+***REMOVED***
+
+.btn-orange:not(:disabled):not(.disabled):active,
+.btn-orange:not(:disabled):not(.disabled).active,
+.show>.btn-orange.dropdown-toggle {
+***REMOVED***color: #fff;
+***REMOVED***background-color: #c35a02;
+***REMOVED***border-color: #005cbf
+***REMOVED***
+
+.btn-orange:not(:disabled):not(.disabled):active:focus,
+.btn-orange:not(:disabled):not(.disabled).active:focus,
+.show>.btn-orange.dropdown-toggle:focus {
+***REMOVED***box-shadow: 0 0 0 .2rem rgba(38, 143, 255, 0.5)
+***REMOVED***
+
+.btn-outline-orange {
+***REMOVED***color: #fd7e14;
+***REMOVED***border-color: #fd7e14
+***REMOVED***
+
+.btn-outline-orange:hover {
+***REMOVED***color: #fff;
+***REMOVED***background-color: #fd7e14;
+***REMOVED***border-color: #fd7e14
+***REMOVED***
+
+.btn-outline-orange:focus,
+.btn-outline-orange.focus {
+***REMOVED***box-shadow: 0 0 0 .2rem rgba(0, 123, 255, 0.5)
+***REMOVED***
+
+.btn-outline-orange.disabled,
+.btn-outline-orange:disabled {
+***REMOVED***color: #fd7e14;
+***REMOVED***background-color: transparent
+***REMOVED***
+
+.btn-outline-orange:not(:disabled):not(.disabled):active,
+.btn-outline-orange:not(:disabled):not(.disabled).active,
+.show>.btn-outline-orange.dropdown-toggle {
+***REMOVED***color: #fff;
+***REMOVED***background-color: #fd7e14;
+***REMOVED***border-color: #fd7e14
+***REMOVED***
+
+.btn-outline-orange:not(:disabled):not(.disabled):active:focus,
+.btn-outline-orange:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-orange.dropdown-toggle:focus {
+***REMOVED***box-shadow: 0 0 0 .2rem rgba(0, 123, 255, 0.5)
+***REMOVED***
+
+.badge-orange {
+***REMOVED***color: #fff;
+***REMOVED***background-color: #fd7e14
+***REMOVED***
+
+a.badge-orange:hover,
+a.badge-orange:focus {
+***REMOVED***color: #fff;
+***REMOVED***background-color: #c35a02
+***REMOVED***
+
+a.badge-orange:focus,
+a.badge-orange.focus {
+***REMOVED***outline: 0;
+***REMOVED***box-shadow: 0 0 0 .2rem rgba(0, 123, 255, 0.5)
+***REMOVED***
+
+.alert-orange {
+***REMOVED***color: #004085;
+***REMOVED***background-color: #cce5ff;
+***REMOVED***border-color: #fedbbd
+***REMOVED***
+
+.alert-orange hr {
+***REMOVED***border-top-color: #fecda4
+***REMOVED***
+
+.alert-orange .alert-link {
+***REMOVED***color: #002752
+***REMOVED***
+
+.list-group-item-orange {
+***REMOVED***color: #004085;
+***REMOVED***background-color: #fedbbd
+***REMOVED***
+
+.list-group-item-orange.list-group-item-action:hover,
+.list-group-item-orange.list-group-item-action:focus {
+***REMOVED***color: #004085;
+***REMOVED***background-color: #fecda4
+***REMOVED***
+
+.list-group-item-orange.list-group-item-action.active {
+***REMOVED***color: #fff;
+***REMOVED***background-color: #004085;
+***REMOVED***border-color: #004085
+***REMOVED***
+
+.bg-orange {
+***REMOVED***background-color: #fd7e14 !important
+***REMOVED***
+
+a.bg-orange:hover,
+a.bg-orange:focus,
+button.bg-orange:hover,
+button.bg-orange:focus {
+***REMOVED***background-color: #c35a02 !important
+***REMOVED***
+
+.border-orange {
+***REMOVED***border-color: #fd7e14 !important
+***REMOVED***
+
+.text-orange {
+***REMOVED***color: #fd7e14 !important
+***REMOVED***
+
+a.text-orange:hover,
+a.text-orange:focus {
+***REMOVED***color: #c35a02 !important
+***REMOVED***
+
+.ui-autocomplete {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+***REMOVED***
+.ui-menu-item {
+  width: 50%;
+  color: #495057;
+  text-align: inherit;
+***REMOVED***
+
+.ui-menu-item:hover, .ui-menu-item:focus {
+  z-index: 1;
+  color: #495057;
+  text-decoration: none;
+  background-color: #f8f9fa;
+***REMOVED***
+
+.ui-menu-item:active {
+  color: #212529;
+  background-color: #e9ecef;
+***REMOVED***
+
+.ui-menu-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+***REMOVED***
+
+.ui-menu-item:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+***REMOVED***
+
+.ui-menu-item:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+***REMOVED***
+
+.ui-menu-item.disabled, .ui-menu-item:disabled {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+***REMOVED***
+
+.ui-menu-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+***REMOVED***
+
+.ui-menu-item + .ui-menu-item {
+  border-top-width: 0;
+***REMOVED***
+
+.ui-menu-item + .ui-menu-item.active {
+  margin-top: -1px;
+  border-top-width: 1px;
+***REMOVED***
+
+.ui-helper-hidden-accessible {
+***REMOVED***display: none;
+***REMOVED***

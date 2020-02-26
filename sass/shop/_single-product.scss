@@ -1,0 +1,83 @@
+***REMOVED***
+***REMOVED*** Single Product
+***REMOVED***/
+.single-product {
+***REMOVED***div.product {
+***REMOVED******REMOVED***@include clearfix;
+***REMOVED******REMOVED***position: relative;
+
+***REMOVED******REMOVED***.woocommerce-product-gallery {
+***REMOVED******REMOVED******REMOVED***position: relative;
+
+***REMOVED******REMOVED******REMOVED***.woocommerce-product-gallery__trigger {
+***REMOVED******REMOVED******REMOVED******REMOVED***position: absolute;
+***REMOVED******REMOVED******REMOVED******REMOVED***top: 1em;
+***REMOVED******REMOVED******REMOVED******REMOVED***right: 1em;
+***REMOVED******REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED******REMOVED******REMOVED***z-index: 99;
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***.flex-viewport {
+***REMOVED******REMOVED******REMOVED******REMOVED***margin-bottom: 1em;
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***.flex-control-thumbs {
+***REMOVED******REMOVED******REMOVED******REMOVED***@include clearfix;
+***REMOVED******REMOVED******REMOVED******REMOVED***margin: 0;
+***REMOVED******REMOVED******REMOVED******REMOVED***padding: 0;
+
+***REMOVED******REMOVED******REMOVED******REMOVED***li {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***list-style: none;
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***cursor: pointer;
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***float: left;
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***img {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***opacity: .5;
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***&.flex-active {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***opacity: 1;
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***&:hover {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***img {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***opacity: 1;
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***@for $i from 2 through 5 {
+***REMOVED******REMOVED******REMOVED******REMOVED***&.woocommerce-product-gallery--columns-#{$i***REMOVED*** {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***.flex-control-thumbs {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***li {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@include column-width($i);
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***&:nth-child(#{$i***REMOVED***n) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***margin-right: 0;
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***&:nth-child(#{$i***REMOVED***n+1) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***clear: both;
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+.stock {
+***REMOVED***&:empty:before {
+***REMOVED******REMOVED***display: none;
+***REMOVED***
+
+***REMOVED***&.in-stock {
+***REMOVED******REMOVED***color: $woocommerce__color-success;
+***REMOVED***
+
+***REMOVED***&.out-of-stock {
+***REMOVED******REMOVED***color: $woocommerce__color-error;
+***REMOVED***
+***REMOVED***

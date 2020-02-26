@@ -1,0 +1,264 @@
+***REMOVED***
+***REMOVED*** Header cart
+***REMOVED***/
+.site-header-cart {
+***REMOVED***position: relative;
+***REMOVED***margin: 0;
+***REMOVED***padding: 0;
+***REMOVED***@include clearfix;
+
+***REMOVED***.cart-contents {
+***REMOVED******REMOVED***text-decoration: none;
+***REMOVED***
+
+***REMOVED***.widget_shopping_cart {
+***REMOVED******REMOVED***display: none;
+***REMOVED***
+
+***REMOVED***.product_list_widget {
+***REMOVED******REMOVED***margin: 0;
+***REMOVED******REMOVED***padding: 0;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Star rating
+***REMOVED***/
+.star-rating {
+***REMOVED***overflow: hidden;
+***REMOVED***position: relative;
+***REMOVED***height: 1.618em;
+***REMOVED***line-height: 1.618;
+***REMOVED***font-size: 1em;
+***REMOVED***width: 5.3em;
+***REMOVED***font-family: 'star';
+***REMOVED***font-weight: 400;
+
+***REMOVED***&:before {
+***REMOVED******REMOVED***content: "\53\53\53\53\53";
+***REMOVED******REMOVED***opacity: .25;
+***REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED***top: 0;
+***REMOVED******REMOVED***left: 0;
+***REMOVED******REMOVED***position: absolute;
+***REMOVED***
+
+***REMOVED***span {
+***REMOVED******REMOVED***overflow: hidden;
+***REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED***top: 0;
+***REMOVED******REMOVED***left: 0;
+***REMOVED******REMOVED***position: absolute;
+***REMOVED******REMOVED***padding-top: 1.5em;
+***REMOVED***
+
+***REMOVED***span:before {
+***REMOVED******REMOVED***content: "\53\53\53\53\53";
+***REMOVED******REMOVED***top: 0;
+***REMOVED******REMOVED***position: absolute;
+***REMOVED******REMOVED***left: 0;
+***REMOVED******REMOVED***color: $color__link;
+***REMOVED***
+***REMOVED***
+
+p.stars {
+***REMOVED***a {
+***REMOVED******REMOVED***position: relative;
+***REMOVED******REMOVED***height: 1em;
+***REMOVED******REMOVED***width: 1em;
+***REMOVED******REMOVED***text-indent: -999em;
+***REMOVED******REMOVED***display: inline-block;
+***REMOVED******REMOVED***text-decoration: none;
+***REMOVED******REMOVED***margin-right: 1px;
+***REMOVED******REMOVED***font-weight: 400;
+
+***REMOVED******REMOVED***&:before {
+***REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED******REMOVED***position: absolute;
+***REMOVED******REMOVED******REMOVED***top: 0;
+***REMOVED******REMOVED******REMOVED***left: 0;
+***REMOVED******REMOVED******REMOVED***width: 1em;
+***REMOVED******REMOVED******REMOVED***height: 1em;
+***REMOVED******REMOVED******REMOVED***line-height: 1;
+***REMOVED******REMOVED******REMOVED***font-family: "star";
+***REMOVED******REMOVED******REMOVED***content: "\53";
+***REMOVED******REMOVED******REMOVED***color: $color__text-main;
+***REMOVED******REMOVED******REMOVED***text-indent: 0;
+***REMOVED******REMOVED******REMOVED***opacity: .25;
+***REMOVED***
+
+***REMOVED******REMOVED***&:hover {
+***REMOVED******REMOVED******REMOVED***~ a:before {
+***REMOVED******REMOVED******REMOVED******REMOVED***content: "\53";
+***REMOVED******REMOVED******REMOVED******REMOVED***color: $color__text-main;
+***REMOVED******REMOVED******REMOVED******REMOVED***opacity: .25;
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+
+***REMOVED***&:hover {
+***REMOVED******REMOVED***a {
+***REMOVED******REMOVED******REMOVED***&:before {
+***REMOVED******REMOVED******REMOVED******REMOVED***content: "\53";
+***REMOVED******REMOVED******REMOVED******REMOVED***color: $color__link;
+***REMOVED******REMOVED******REMOVED******REMOVED***opacity: 1;
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+
+***REMOVED***&.selected {
+***REMOVED******REMOVED***a.active {
+***REMOVED******REMOVED******REMOVED***&:before {
+***REMOVED******REMOVED******REMOVED******REMOVED***content: "\53";
+***REMOVED******REMOVED******REMOVED******REMOVED***color: $color__link;
+***REMOVED******REMOVED******REMOVED******REMOVED***opacity: 1;
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***~ a:before {
+***REMOVED******REMOVED******REMOVED******REMOVED***content: "\53";
+***REMOVED******REMOVED******REMOVED******REMOVED***color: $color__text-main;
+***REMOVED******REMOVED******REMOVED******REMOVED***opacity: .25;
+***REMOVED******REMOVED***
+***REMOVED***
+
+***REMOVED******REMOVED***a:not(.active) {
+***REMOVED******REMOVED******REMOVED***&:before {
+***REMOVED******REMOVED******REMOVED******REMOVED***content: "\53";
+***REMOVED******REMOVED******REMOVED******REMOVED***color: $color__link;
+***REMOVED******REMOVED******REMOVED******REMOVED***opacity: 1;
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Tabs
+***REMOVED***/
+.woocommerce-tabs {
+***REMOVED***ul.tabs {
+***REMOVED******REMOVED***list-style: none;
+***REMOVED******REMOVED***margin: 0;
+***REMOVED******REMOVED***padding: 0;
+***REMOVED******REMOVED***text-align: left;
+
+***REMOVED******REMOVED***li {
+***REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED******REMOVED***margin: 0;
+***REMOVED******REMOVED******REMOVED***position: relative;
+
+***REMOVED******REMOVED******REMOVED***a {
+***REMOVED******REMOVED******REMOVED******REMOVED***padding: 1em 0;
+***REMOVED******REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+
+***REMOVED***.panel {
+***REMOVED******REMOVED***h2:first-of-type {
+***REMOVED******REMOVED******REMOVED***margin-bottom: 1em;
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Password strength meter
+***REMOVED***/
+.woocommerce-password-strength {
+***REMOVED***text-align: right;
+
+***REMOVED***&.strong {
+***REMOVED******REMOVED***color: $woocommerce__color-success;
+***REMOVED***
+
+***REMOVED***&.short {
+***REMOVED******REMOVED***color: $woocommerce__color-error;
+***REMOVED***
+
+***REMOVED***&.bad {
+***REMOVED******REMOVED***color: $woocommerce__color-error;
+***REMOVED***
+
+***REMOVED***&.good {
+***REMOVED******REMOVED***color: $woocommerce__color-info;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Forms
+***REMOVED***/
+.form-row {
+***REMOVED***&.woocommerce-validated {
+***REMOVED******REMOVED***input.input-text {
+***REMOVED******REMOVED******REMOVED***box-shadow: inset 2px 0 0 $woocommerce__color-success;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***&.woocommerce-invalid {
+***REMOVED******REMOVED***input.input-text {
+***REMOVED******REMOVED******REMOVED***box-shadow: inset 2px 0 0 $woocommerce__color-error;
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+.required {
+***REMOVED***color: red;
+***REMOVED***
+
+***REMOVED***
+***REMOVED*** Notices
+***REMOVED***/
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
+p.no-comments {
+***REMOVED***@include clearfix;
+***REMOVED***background-color: $woocommerce__color-success;
+***REMOVED***clear: both;
+***REMOVED***
+
+.woocommerce-info,
+.woocommerce-noreviews,
+p.no-comments {
+***REMOVED***background-color: $woocommerce__color-info;
+***REMOVED***
+
+.woocommerce-error {
+***REMOVED***background-color: $woocommerce__color-error;
+***REMOVED***
+
+.demo_store {
+***REMOVED***position: fixed;
+***REMOVED***left: 0;
+***REMOVED***bottom: 0;
+***REMOVED***right: 0;
+***REMOVED***margin: 0;
+***REMOVED***padding: 1em;
+***REMOVED***background-color: $woocommerce__color-info;
+***REMOVED***z-index: 9999;
+***REMOVED***
+
+@media screen and (min-width: 48em) {
+***REMOVED******REMOVED***
+***REMOVED******REMOVED*** Header cart
+***REMOVED******REMOVED***/
+***REMOVED***.site-header-cart {
+***REMOVED******REMOVED***.widget_shopping_cart {
+***REMOVED******REMOVED******REMOVED***position: absolute;
+***REMOVED******REMOVED******REMOVED***top: 100%;
+***REMOVED******REMOVED******REMOVED***width: 100%;
+***REMOVED******REMOVED******REMOVED***z-index: 999999;
+***REMOVED******REMOVED******REMOVED***left: -999em;
+***REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED******REMOVED***box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+***REMOVED***
+
+***REMOVED******REMOVED***&:hover,
+***REMOVED******REMOVED***&.focus {
+***REMOVED******REMOVED******REMOVED***.widget_shopping_cart {
+***REMOVED******REMOVED******REMOVED******REMOVED***left: 0;
+***REMOVED******REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***

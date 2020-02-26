@@ -1,0 +1,45 @@
+p {
+***REMOVED***margin-bottom: 1.5em;
+***REMOVED***
+
+dfn, cite, em, i {
+***REMOVED***font-style: italic;
+***REMOVED***
+
+blockquote {
+***REMOVED***margin: 0 1.5em;
+***REMOVED***
+
+address {
+***REMOVED***margin: 0 0 1.5em;
+***REMOVED***
+
+pre {
+***REMOVED***background: $color__background-pre;
+***REMOVED***font-family: $font__pre;
+***REMOVED***@include font-size(0.9375);
+***REMOVED***line-height: $font__line-height-pre;
+***REMOVED***margin-bottom: 1.6em;
+***REMOVED***max-width: 100%;
+***REMOVED***overflow: auto;
+***REMOVED***padding: 1.6em;
+***REMOVED***
+
+code, kbd, tt, var {
+***REMOVED***font-family: $font__code;
+***REMOVED***@include font-size(0.9375);
+***REMOVED***
+
+abbr, acronym {
+***REMOVED***border-bottom: 1px dotted $color__border-abbr;
+***REMOVED***cursor: help;
+***REMOVED***
+
+mark, ins {
+***REMOVED***background: $color__background-ins;
+***REMOVED***text-decoration: none;
+***REMOVED***
+
+big {
+***REMOVED***font-size: 125%;
+***REMOVED***

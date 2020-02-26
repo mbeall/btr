@@ -1,0 +1,21 @@
+.gallery {
+***REMOVED***margin-bottom: 1.5em;
+***REMOVED***
+
+.gallery-item {
+***REMOVED***display: inline-block;
+***REMOVED***text-align: center;
+***REMOVED***vertical-align: top;
+***REMOVED***width: 100%;
+
+***REMOVED***// Loops to enumerate the classes for gallery columns.
+***REMOVED***@for $i from 2 through 9 {
+***REMOVED******REMOVED***.gallery-columns-#{$i***REMOVED*** & {
+***REMOVED******REMOVED******REMOVED***max-width: map-get( $columns, $i );
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+.gallery-caption {
+***REMOVED***display: block;
+***REMOVED***

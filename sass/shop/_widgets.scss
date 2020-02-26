@@ -1,0 +1,64 @@
+***REMOVED***
+***REMOVED*** WooCommerce Price Filter
+***REMOVED***/
+.widget_price_filter {
+***REMOVED***.price_slider {
+***REMOVED******REMOVED***margin-bottom: 1.5em;
+***REMOVED***
+
+***REMOVED***.price_slider_amount {
+***REMOVED******REMOVED***text-align: right;
+***REMOVED******REMOVED***line-height: 2.4em;
+
+***REMOVED******REMOVED***.button {
+***REMOVED******REMOVED******REMOVED***float: left;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***.ui-slider {
+***REMOVED******REMOVED***position: relative;
+***REMOVED******REMOVED***text-align: left;
+***REMOVED***
+
+***REMOVED***.ui-slider .ui-slider-handle {
+***REMOVED******REMOVED***position: absolute;
+***REMOVED******REMOVED***z-index: 2;
+***REMOVED******REMOVED***width: 1em;
+***REMOVED******REMOVED***height: 1em;
+***REMOVED******REMOVED***cursor: ew-resize;
+***REMOVED******REMOVED***outline: none;
+***REMOVED******REMOVED***background: $color__link;
+***REMOVED******REMOVED***box-sizing: border-box;
+***REMOVED******REMOVED***margin-top: -.25em;
+***REMOVED******REMOVED***opacity: 1;
+
+***REMOVED******REMOVED***&:last-child {
+***REMOVED******REMOVED******REMOVED***margin-left: -1em;
+***REMOVED***
+
+***REMOVED******REMOVED***&:hover,
+***REMOVED******REMOVED***&.ui-state-active {
+***REMOVED******REMOVED******REMOVED***box-shadow: 0 0 0 .25em rgba(#000, 0.1);
+***REMOVED***
+***REMOVED***
+
+***REMOVED***.ui-slider .ui-slider-range {
+***REMOVED******REMOVED***position: absolute;
+***REMOVED******REMOVED***z-index: 1;
+***REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED***border: 0;
+***REMOVED******REMOVED***background: $color__link;
+***REMOVED***
+
+***REMOVED***.price_slider_wrapper .ui-widget-content {
+***REMOVED******REMOVED***background: rgba(0,0,0,0.1);
+***REMOVED***
+
+***REMOVED***.ui-slider-horizontal {
+***REMOVED******REMOVED***height: .5em;
+***REMOVED***
+
+***REMOVED***.ui-slider-horizontal .ui-slider-range {
+***REMOVED******REMOVED***height: 100%;
+***REMOVED***
+***REMOVED***

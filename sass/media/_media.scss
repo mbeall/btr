@@ -1,0 +1,30 @@
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+***REMOVED***border: none;
+***REMOVED***margin-bottom: 0;
+***REMOVED***margin-top: 0;
+***REMOVED***padding: 0;
+***REMOVED***
+
+/* Make sure embeds and iframes fit their containers.***REMOVED***/
+embed,
+iframe,
+object {
+***REMOVED***max-width: 100%;
+***REMOVED***
+
+/* Make sure logo link wraps around logo image.***REMOVED***/
+.custom-logo-link {
+***REMOVED***display: inline-block;
+***REMOVED***
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+@import "captions";
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+@import "galleries";

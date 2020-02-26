@@ -1,0 +1,19 @@
+a {
+***REMOVED***color: $color__link;
+
+***REMOVED***&:visited {
+***REMOVED******REMOVED***color: $color__link-visited;
+***REMOVED***
+***REMOVED***&:hover,
+***REMOVED***&:focus,
+***REMOVED***&:active {
+***REMOVED******REMOVED***color: $color__link-hover;
+***REMOVED***
+***REMOVED***&:focus {
+***REMOVED******REMOVED***outline: thin dotted;
+***REMOVED***
+***REMOVED***&:hover,
+***REMOVED***&:active {
+***REMOVED******REMOVED***outline: 0;
+***REMOVED***
+***REMOVED***

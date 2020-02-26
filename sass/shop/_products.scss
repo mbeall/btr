@@ -1,0 +1,63 @@
+***REMOVED***
+***REMOVED*** Products
+***REMOVED***/
+ul.products {
+***REMOVED***@include clearfix;
+***REMOVED***margin: 0;
+***REMOVED***padding: 0;
+
+***REMOVED***li.product {
+***REMOVED******REMOVED***list-style: none;
+***REMOVED******REMOVED***position: relative;
+***REMOVED******REMOVED***margin-bottom: 2em;
+
+***REMOVED******REMOVED***.woocommerce-loop-product__title {
+***REMOVED******REMOVED******REMOVED***font-size: 1rem;
+***REMOVED***
+
+***REMOVED******REMOVED***img {
+***REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED***
+
+***REMOVED******REMOVED***.button {
+***REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+@media screen and (min-width: 48em) {
+***REMOVED***ul.products {
+***REMOVED******REMOVED***li.product {
+***REMOVED******REMOVED******REMOVED***@include column-width(3);
+***REMOVED******REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED******REMOVED***margin-right: $columns__margin;
+
+***REMOVED******REMOVED******REMOVED***&.first {
+***REMOVED******REMOVED******REMOVED******REMOVED***clear: both;
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***&.last {
+***REMOVED******REMOVED******REMOVED******REMOVED***margin-right: 0;
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+
+***REMOVED***.columns-1 {
+***REMOVED******REMOVED***ul.products {
+***REMOVED******REMOVED******REMOVED***li.product {
+***REMOVED******REMOVED******REMOVED******REMOVED***float: none;
+***REMOVED******REMOVED******REMOVED******REMOVED***width: 100%;
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+
+***REMOVED***@for $i from 2 through 6 {
+***REMOVED******REMOVED***.columns-#{$i***REMOVED*** {
+***REMOVED******REMOVED******REMOVED***ul.products {
+***REMOVED******REMOVED******REMOVED******REMOVED***li.product {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@include column-width( $i );
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***

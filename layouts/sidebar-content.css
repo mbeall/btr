@@ -1,0 +1,34 @@
+/*
+***REMOVED*** Theme Name: Big Thompson River
+***REMOVED***
+***REMOVED*** Layout: Sidebar-Content
+***REMOVED***
+***REMOVED*** Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+.content-area {
+***REMOVED***float: right;
+***REMOVED***margin: 0 0 0 -25%;
+***REMOVED***width: 100%;
+***REMOVED***
+.site-main {
+***REMOVED***margin: 0 0 0 25%;
+***REMOVED***
+.site-content .widget-area {
+***REMOVED***float: left;
+***REMOVED***overflow: hidden;
+***REMOVED***width: 25%;
+***REMOVED***
+.site-footer {
+***REMOVED***clear: both;
+***REMOVED***width: 100%;
+***REMOVED***
+
+.no-sidebar .content-area {
+***REMOVED***float: none;
+***REMOVED***margin-left: auto;
+***REMOVED***margin-right: auto;
+***REMOVED***
+.no-sidebar .site-main {
+***REMOVED***margin-right: 0;
+***REMOVED***

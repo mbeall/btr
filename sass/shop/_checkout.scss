@@ -1,0 +1,21 @@
+***REMOVED***
+***REMOVED*** Checkout
+***REMOVED***/
+@media screen and (min-width: 768px) {
+***REMOVED***.col2-set {
+***REMOVED******REMOVED***.form-row-first {
+***REMOVED******REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED******REMOVED***margin-right: $columns__margin;
+***REMOVED***
+
+***REMOVED******REMOVED***.form-row-last {
+***REMOVED******REMOVED******REMOVED***float: right;
+***REMOVED******REMOVED******REMOVED***margin-right: 0;
+***REMOVED***
+
+***REMOVED******REMOVED***.form-row-first,
+***REMOVED******REMOVED***.form-row-last {
+***REMOVED******REMOVED******REMOVED***@include column-width(2);
+***REMOVED***
+***REMOVED***
+***REMOVED***

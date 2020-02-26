@@ -1,0 +1,79 @@
+***REMOVED***
+***REMOVED*** Shop tables
+***REMOVED***/
+table.shop_table_responsive {
+***REMOVED***thead {
+***REMOVED******REMOVED***display: none;
+***REMOVED***
+
+***REMOVED***tbody {
+***REMOVED******REMOVED***th {
+***REMOVED******REMOVED******REMOVED***display: none;
+***REMOVED***
+***REMOVED***
+
+***REMOVED***tr {
+***REMOVED******REMOVED***td {
+***REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED******REMOVED***text-align: right;
+***REMOVED******REMOVED******REMOVED***clear: both;
+
+***REMOVED******REMOVED******REMOVED***&:before {
+***REMOVED******REMOVED******REMOVED******REMOVED***content: attr(data-title) ': ';
+***REMOVED******REMOVED******REMOVED******REMOVED***float: left;
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***&.product-remove {
+***REMOVED******REMOVED******REMOVED******REMOVED***a {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***text-align: left;
+***REMOVED******REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED******REMOVED***&:before {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***display: none;
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***&.actions,
+***REMOVED******REMOVED******REMOVED***&.download-actions {
+***REMOVED******REMOVED******REMOVED******REMOVED***&:before {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***display: none;
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***&.download-actions {
+***REMOVED******REMOVED******REMOVED******REMOVED***.button {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***display: block;
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***text-align: center;
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
+
+@media screen and (min-width: 48em) {
+***REMOVED***table.shop_table_responsive {
+***REMOVED******REMOVED***thead {
+***REMOVED******REMOVED******REMOVED***display: table-header-group;
+***REMOVED***
+
+***REMOVED******REMOVED***tbody {
+***REMOVED******REMOVED******REMOVED***th {
+***REMOVED******REMOVED******REMOVED******REMOVED***display: table-cell;
+***REMOVED******REMOVED***
+***REMOVED***
+
+***REMOVED******REMOVED***tr {
+***REMOVED******REMOVED******REMOVED***th, td {
+***REMOVED******REMOVED******REMOVED******REMOVED***text-align: left;
+***REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED***td {
+***REMOVED******REMOVED******REMOVED******REMOVED***display: table-cell;
+
+***REMOVED******REMOVED******REMOVED******REMOVED***&:before {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***display: none;
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
