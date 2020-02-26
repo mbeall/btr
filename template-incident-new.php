@@ -11,8 +11,10 @@ if (!is_user_logged_in()) {
 
 $csm_user = bigt_csm_get_current_user();
 
-if (false == $csm_user) {
-***REMOVED***header('Location: ' . get_home_url() . '/support/' . $_POST['category'] . '/?error=user' );
+if (false === $csm_user) {
+***REMOVED***$attempt_id = uniqid();
+***REMOVED***$_SESSION[$attempt_id] = $_POST;
+***REMOVED***header('Location: ' . get_home_url() . '/support/' . $_POST['category'] . '/?error=user&attempt=' . $attempt_id );
 ***REMOVED***
 
 $mbui = uniqid();
