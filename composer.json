@@ -1,0 +1,14 @@
+{
+    "name": "thompsonschools.org/bigt",
+    "type": "website",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5"
+  ***REMOVED*****REMOVED*****REMOVED***,
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Matt Beall",
+            "email": "matt.beall@thompsonschools.org"
+      ***REMOVED*****REMOVED*****REMOVED***
+    ]
+***REMOVED***
