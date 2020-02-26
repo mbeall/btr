@@ -1,13 +1,21 @@
 ***REMOVED***
 ***REMOVED***
-* Template Name: Request Support
-*/
+***REMOVED*** Template Name: Request Support
+***REMOVED***/
 session_start();
-if (!is_user_logged_in()) {
-***REMOVED***header('Location: ' . wp_login_url( get_permalink() ) );
+if ( ! is_user_logged_in() ) {
+***REMOVED***header( 'Location: ' . wp_login_url( get_permalink() ) );
 ***REMOVED***
 
-$csm_user = bigt_csm_get_current_user();
+if ( ! empty( $_GET['error'] ) {
+***REMOVED***if ( 'user' === $_GET['error'] ) {
+***REMOVED******REMOVED***$csm_user = false;
+***REMOVED*** else {
+***REMOVED******REMOVED***$csm_user = bigt_csm_get_current_user();
+***REMOVED***
+***REMOVED*** else {
+***REMOVED***$csm_user = bigt_csm_get_current_user();
+***REMOVED***
 
 get_header();
 
@@ -15,14 +23,14 @@ while ( have_posts() ) :
 ***REMOVED***the_post();
 ***REMOVED***global $post;
 
-switch ($post->post_name) {
-***REMOVED***case 'surplus':
-***REMOVED******REMOVED***$description_label = 'Please describe the unused electronic devices you would like to be picked up.';
-***REMOVED******REMOVED***break;
-***REMOVED***default:
-***REMOVED******REMOVED***$description_label = 'Please describe the issue you are experiencing.';
+***REMOVED***switch ( $post->post_name ) {
+***REMOVED******REMOVED***case 'surplus':
+***REMOVED******REMOVED******REMOVED***$description_label = 'Please describe the unused electronic devices you would like to be picked up.';
+***REMOVED******REMOVED******REMOVED***break;
+***REMOVED******REMOVED***default:
+***REMOVED******REMOVED******REMOVED***$description_label = 'Please describe the issue you are experiencing.';
 ***REMOVED***
-?>
+***REMOVED***?>
 
 <div class="row">
 ***REMOVED***<header class="col text-center">
@@ -30,7 +38,7 @@ switch ($post->post_name) {
 ***REMOVED***</header><!-- .entry-header -->
 </div><!-- .row -->
 
-***REMOVED*** if (false == $csm_user || 'user' == $_GET['error']) : ?>
+***REMOVED******REMOVED*** if ( false === $csm_user ) : ?>
 <div class="row mt-4">
 ***REMOVED***<div class="col">
 ***REMOVED******REMOVED***<div class="alert alert-danger">
@@ -45,14 +53,14 @@ switch ($post->post_name) {
 ***REMOVED******REMOVED***<form action="***REMOVED*** echo get_home_url(); ?>/incident/new/" method="post">
 ***REMOVED******REMOVED******REMOVED******REMOVED***<input type="hidden" name="category" id="category" value="***REMOVED*** echo $post->post_name; ?>"/>
 ***REMOVED******REMOVED******REMOVED***
-***REMOVED******REMOVED******REMOVED******REMOVED*** if ('software' == $post->post_name) : ?>
+***REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'software' == $post->post_name ) : ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="software">Software</label>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="software" name="software" placeholder="Start typing the name of the software" required />
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 ***REMOVED******REMOVED******REMOVED***<script>
   jQuery( function() {
-    var availableTags = [
+***REMOVED***var availableTags = [
 ***REMOVED******REMOVED***'AD Manager',
 ***REMOVED******REMOVED***'Absence Management (AESOP)',
 ***REMOVED******REMOVED***'Achieve 3000',
@@ -104,10 +112,10 @@ switch ($post->post_name) {
 ***REMOVED******REMOVED***'Think Central',
 ***REMOVED******REMOVED***'TimeClock Plus',
 ***REMOVED******REMOVED***'WIDA'
-    ];
-    jQuery( "#software" ).autocomplete({
-      source: availableTags
-  ***REMOVED*****REMOVED*****REMOVED***);
+***REMOVED***];
+***REMOVED***jQuery( "#software" ).autocomplete({
+***REMOVED***  source: availableTags
+***REMOVED***);
 ***REMOVED*****REMOVED*****REMOVED*** );
   </script>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*** ?>
@@ -122,7 +130,7 @@ switch ($post->post_name) {
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="col">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<select class="form-control" id="site" name="site">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option value="false">Please select your site.</option>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED***  if (!empty($csm_user->SiteName)) { ?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED*** if ( ! empty( $csm_user->SiteName ) ) { ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option selected>***REMOVED*** echo $csm_user->SiteName; ?></option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED******REMOVED*****REMOVED*** ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Admin - Community Connections</option>
@@ -184,13 +192,13 @@ switch ($post->post_name) {
 
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="contact_method">How may we contact you if we have questions?</label><br>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED*** if (!empty($csm_user->Phone)) { ?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED*** if ( ! empty( $csm_user->Phone ) ) { ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-check form-check-inline">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <input class="form-check-input" type="radio" name="preferred_contact" id="contact_phone" value="***REMOVED*** echo $csm_user->Phone; ?>">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <label class="form-check-label" for="contact_phone">***REMOVED*** echo $csm_user->Phone; ?></label>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED******REMOVED*****REMOVED*** ?>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED*** if (!empty($csm_user->Email)) { ?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED*** if ( ! empty( $csm_user->Email ) ) { ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-check form-check-inline">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <input class="form-check-input" type="radio" name="preferred_contact" id="contact_email" value="***REMOVED*** echo $csm_user->Email; ?>">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <label class="form-check-label" for="contact_email">***REMOVED*** echo $csm_user->Email; ?></label>
@@ -202,7 +210,7 @@ switch ($post->post_name) {
 ***REMOVED******REMOVED******REMOVED******REMOVED***  </div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** if ('telecom' != $post->post_name && 'intercom' != $post->post_name && 'surplus' != $post->post_name) : ?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'telecom' != $post->post_name && 'intercom' != $post->post_name && 'surplus' != $post->post_name ) : ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="asset_number">TSD Asset Tag Number&emsp;<span class="text-muted">ex. #####</span></label>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="asset_number" name="asset_number" required />
@@ -242,7 +250,7 @@ switch ($post->post_name) {
 ***REMOVED******REMOVED******REMOVED*** the_content(); ?>
 ***REMOVED***</div><!-- .col-md-4 -->
 </div><!-- .row -->
-***REMOVED***
+***REMOVED******REMOVED***
 endwhile; // End of the loop.
-get_footer(); ?>
-
+get_footer();
+?>
