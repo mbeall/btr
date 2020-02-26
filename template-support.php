@@ -13,8 +13,15 @@ if ( ! empty( $_GET['error'] ) ) {
 ***REMOVED*** else {
 ***REMOVED******REMOVED***$csm_user = bigt_csm_get_current_user();
 ***REMOVED***
+***REMOVED***if ( ! empty( $_GET['attempt'] ) ) {
+***REMOVED******REMOVED***$attempt_id = $_GET['attempt'];
+***REMOVED******REMOVED***$data       = $_SESSION[ $attempt_id ];
+***REMOVED*** else {
+***REMOVED******REMOVED***$data = false;
+***REMOVED***
 ***REMOVED*** else {
 ***REMOVED***$csm_user = bigt_csm_get_current_user();
+***REMOVED***$data     = false;
 ***REMOVED***
 
 get_header();
@@ -48,6 +55,16 @@ while ( have_posts() ) :
 </div>
 ***REMOVED******REMOVED*****REMOVED*** ?>
 
+***REMOVED******REMOVED*** if ( false !== $data ) : ?>
+<div class="row mt-4">
+***REMOVED***<div class="col">
+***REMOVED******REMOVED***<div class="alert alert-warning">
+***REMOVED******REMOVED******REMOVED***<strong>Submission failed.</strong> Something went wrong on our end. Please try again or call the ITS Help Desk at (970) 613-7777 to report this error.
+***REMOVED******REMOVED***</div>
+***REMOVED***</div>
+</div>
+***REMOVED******REMOVED******REMOVED*****REMOVED*** ?>
+
 <div class="row mt-4">
 ***REMOVED***<div class="col pb-1">
 ***REMOVED******REMOVED***<form action="***REMOVED*** echo get_home_url(); ?>/incident/new/" method="post">
@@ -56,7 +73,12 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'software' == $post->post_name ) : ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="software">Software</label>
-***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="software" name="software" placeholder="Start typing the name of the software" required />
+***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="software" name="software" placeholder="Start typing the name of the software" required 
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['software'] ) ) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['software'] . '"';***REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** />
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 ***REMOVED******REMOVED******REMOVED***<script>
   jQuery( function() {
@@ -122,7 +144,12 @@ while ( have_posts() ) :
 
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<label for="description">***REMOVED*** echo $description_label; ?></label>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<textarea class="form-control" id="description" name="description" rows="3" required>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['description'] ) ) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo $data['description'];***REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</textarea>
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 
 ***REMOVED******REMOVED******REMOVED******REMOVED***<label for="site">Location&emsp;<span class="text-muted">Where would you like the technician to respond?</span></label>
@@ -130,8 +157,12 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="col">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<select class="form-control" id="site" name="site">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option value="false">Please select your site.</option>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['site'] ) ) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo '<option selected>' . $data['site'] . '</option>';***REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED*** if ( ! empty( $csm_user->SiteName ) ) { ?>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option selected>***REMOVED*** echo $csm_user->SiteName; ?></option>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>***REMOVED*** echo $csm_user->SiteName; ?></option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED******REMOVED*****REMOVED*** ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Admin - Community Connections</option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Admin - Learning Services</option>
@@ -186,7 +217,12 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</select>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  </div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="col-sm-3">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" name="room" placeholder="Room" />
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" name="room" placeholder="Room" 
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['room'] ) ) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['room'] . '"';***REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***/>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  </div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 
@@ -206,14 +242,24 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED******REMOVED*****REMOVED*** ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="form-check form-check-inline">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input class="form-check-input" type="radio" name="preferred_contact" id="contact_other" value="other">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" placeholder="Other" id="contact_custom" name="contact_custom" />
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" placeholder="Other" id="contact_custom" name="contact_custom" 
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['contact_custom'] ) ) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['contact_custom'] . '"';***REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***/>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  </div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'telecom' != $post->post_name && 'intercom' != $post->post_name && 'surplus' != $post->post_name ) : ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="asset_number">TSD Asset Tag Number&emsp;<span class="text-muted">ex. #####</span></label>
-***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="asset_number" name="asset_number" required />
+***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="asset_number" name="asset_number" required 
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['asset_number'] ) ) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['asset_number'] . '"';***REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** />
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*** ?>
 
