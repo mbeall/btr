@@ -7,7 +7,7 @@ if ( ! is_user_logged_in() ) {
 ***REMOVED***header( 'Location: ' . wp_login_url( get_permalink() ) );
 ***REMOVED***
 
-if ( ! empty( $_GET['error'] ) {
+if ( ! empty( $_GET['error'] ) ) {
 ***REMOVED***if ( 'user' === $_GET['error'] ) {
 ***REMOVED******REMOVED***$csm_user = false;
 ***REMOVED*** else {
