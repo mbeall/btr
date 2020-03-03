@@ -33,14 +33,14 @@ if ( post_password_required() ) {
 ***REMOVED******REMOVED******REMOVED******REMOVED***printf(
 ***REMOVED******REMOVED******REMOVED******REMOVED*** translators: 1: title.***REMOVED***/
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'bigt' ),
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***'<span>' . get_the_title() . '</span>'
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 ***REMOVED******REMOVED***;
 ***REMOVED******REMOVED*** else {
-***REMOVED******REMOVED******REMOVED******REMOVED***printf( // WPCS: XSS OK.
+***REMOVED******REMOVED******REMOVED******REMOVED***printf(
 ***REMOVED******REMOVED******REMOVED******REMOVED*** translators: 1: comment count number, 2: title.***REMOVED***/
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $bigt_comment_count, 'comments title', 'bigt' ) ),
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***number_format_i18n( $bigt_comment_count ),
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***'<span>' . get_the_title() . '</span>'
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***number_format_i18n( $bigt_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 ***REMOVED******REMOVED***;
 ***REMOVED******REMOVED***
 ***REMOVED******REMOVED******REMOVED***?>
@@ -50,10 +50,12 @@ if ( post_password_required() ) {
 
 ***REMOVED******REMOVED***<ol class="comment-list">
 ***REMOVED******REMOVED******REMOVED******REMOVED***
-***REMOVED******REMOVED******REMOVED***wp_list_comments( array(
-***REMOVED******REMOVED******REMOVED******REMOVED***'style'      => 'ol',
-***REMOVED******REMOVED******REMOVED******REMOVED***'short_ping' => true,
-***REMOVED*** );
+***REMOVED******REMOVED******REMOVED***wp_list_comments(
+***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***'style'      => 'ol',
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***'short_ping' => true,
+***REMOVED******REMOVED***
+***REMOVED***;
 ***REMOVED******REMOVED******REMOVED***?>
 ***REMOVED******REMOVED***</ol><!-- .comment-list -->
 
