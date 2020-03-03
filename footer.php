@@ -14,9 +14,9 @@
 ***REMOVED***</div><!-- #content -->
 
 ***REMOVED***<footer id="colophon" class="container mt-4">
-***REMOVED***  <div class="row text-center">
-***REMOVED******REMOVED***<div class="col"><h5>For minor issues and additional support, call the ITS Help Desk at (970) 613-7777.</h5></div>
-***REMOVED***  </div>
+***REMOVED******REMOVED***<div class="row text-center">
+***REMOVED******REMOVED******REMOVED***<div class="col"><h5>For minor issues and additional support, call the ITS Help Desk at (970) 613-7777.</h5></div>
+***REMOVED******REMOVED***</div>
 ***REMOVED***</footer>
 
 </div><!-- #page -->
