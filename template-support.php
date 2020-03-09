@@ -141,15 +141,12 @@ while ( have_posts() ) :
 ***REMOVED*****REMOVED*****REMOVED*** );
   </script>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*** ?>
-
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<label for="description">***REMOVED*** echo $description_label; ?></label>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<textarea class="form-control" id="description" name="description" rows="3" required>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<textarea class="form-control" id="description" name="description" rows="3" required>***REMOVED***
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['description'] ) ) {
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo $data['description'];***REMOVED*****REMOVED***
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</textarea>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?></textarea>
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 
 ***REMOVED******REMOVED******REMOVED******REMOVED***<label for="site">Location&emsp;<span class="text-muted">Where would you like the technician to respond?</span></label>
@@ -210,10 +207,10 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Transportation</option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Truscott Elementary School</option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Turner Middle School</option>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Unassigned Location</option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Van Buren Elementary School</option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Walt Clark Middle School</option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option>Winona Elementary School</option>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option value="Unassigned">Other</option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</select>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  </div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="col-sm-3">
