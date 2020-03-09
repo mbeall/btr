@@ -84,7 +84,7 @@ if (!empty($user->SiteName)) {
 ***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Ferguson High School':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Garfield Elementary School':
 ***REMOVED******REMOVED***$tech = 'Rosenberger, Polly P SSC';
@@ -147,25 +147,22 @@ if (!empty($user->SiteName)) {
 ***REMOVED******REMOVED***$tech = 'Cole, Suzanne E SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Ferguson High HOPE Program':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Thompson Online Campus':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'LEAP':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'SWAP':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Sanchez, Luis A SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Community Connections':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Sanchez, Luis A SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Loveland Classical':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'NewVision Charter':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Transportation':
 ***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
@@ -174,7 +171,7 @@ if (!empty($user->SiteName)) {
 ***REMOVED******REMOVED***$tech = 'Ruhle, Wachara M SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Admin - Community Connections':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Sanchez, Luis A SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Support Service - Innovative Technology':
 ***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
@@ -189,7 +186,7 @@ if (!empty($user->SiteName)) {
 ***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Harold Ferguson High School':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Admin - Learning Services':
 ***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
