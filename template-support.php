@@ -152,8 +152,8 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED***<label for="site">Location&emsp;<span class="text-muted">Where would you like the technician to respond?</span></label>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group form-row">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="col">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<select class="form-control" id="site" name="site">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option value="false">Please select your site.</option>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<select class="form-control" id="site" name="site" required>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  <option value="">Please select your site.</option>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED***
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['site'] ) ) {
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo '<option selected>' . $data['site'] . '</option>';***REMOVED*****REMOVED***
