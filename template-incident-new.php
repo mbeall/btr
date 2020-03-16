@@ -248,7 +248,7 @@ if (!empty($site)) {
 ***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Admin - Learning Services':
-***REMOVED******REMOVED***$tech = 'Fussman, Chuck S SSC';
+***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  case 'Admin - Financial Services':
 ***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
