@@ -52,7 +52,7 @@ $current_user = get_userdata( get_current_user_id() );
 ***REMOVED******REMOVED***</div>
 ***REMOVED***</nav><!-- #site-navigation -->
 ***REMOVED***
-***REMOVED******REMOVED*** if (is_front_page()) : ?>
+***REMOVED******REMOVED*** if (is_front_page() || is_404()) : ?>
 
     <div class="container text-center">
 ***REMOVED***  <img src="https://www.thompsonschools.org/cms/lib/CO01900772/Centricity/Template/GlobalAssets/images/logos/TSD-Mountain-Line_Blue.png" class="mt-4" />
