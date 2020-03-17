@@ -75,9 +75,10 @@ while ( have_posts() ) :
 
 ***REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'virtual-meeting' == $post->post_name ) : ?>
 
+***REMOVED******REMOVED******REMOVED***<label for="site">Meeting Date and Time</label>
 ***REMOVED******REMOVED******REMOVED***<div class="form-group form-row">
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="col">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" id="meeting_date" name="meeting_date" required
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" id="meeting_date" name="meeting_date" required placeholder="Date"
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED***
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['meeting_date'] ) ) {
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['meeting_date'] . '"';***REMOVED*****REMOVED***
@@ -85,7 +86,7 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** />
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="col-2">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" id="meeting_time" name="meeting_time" required
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" id="meeting_time" name="meeting_time" required placeholder="Time"
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED***
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['meeting_time'] ) ) {
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['meeting_time'] . '"';***REMOVED*****REMOVED***
@@ -175,6 +176,7 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?></textarea>
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'virtual-meeting' != $post->post_name ) : ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<label for="site">Location&emsp;<span class="text-muted">Where would you like the technician to respond?</span></label>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group form-row">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="col">
@@ -249,6 +251,8 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED***  </div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*** ?>
+
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="contact_method">How may we contact you if we have questions?</label><br>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED*** if ( ! empty( $csm_user->Phone ) ) { ?>
@@ -274,7 +278,7 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED***  </div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'telecom' != $post->post_name && 'intercom' != $post->post_name && 'surplus' != $post->post_name ) : ?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'telecom' != $post->post_name && 'intercom' != $post->post_name && 'surplus' != $post->post_name && 'virtual-meeting' != $post->post_name ) : ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="asset_number">TSD Asset Tag Number&emsp;<span class="text-muted">ex. #####</span></label>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="asset_number" name="asset_number" required
@@ -285,7 +289,7 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** />
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*** ?>
-
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'virtual-meeting' != $post->post_name ) : ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="urgency">Does this issue prevent you from doing your work?</label><br>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="form-check form-check-inline">
@@ -309,6 +313,7 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<label class="form-check-label" for="scope_many">Yes</label>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  </div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*** ?>
 ***REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***<button type="submit" class="btn btn-tsd">Submit</button>
 ***REMOVED******REMOVED******REMOVED***</div>
@@ -319,6 +324,10 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED*** the_content(); ?>
 ***REMOVED***</div><!-- .col-md-4 -->
 </div><!-- .row -->
+<script type="text/javascript">
+(function($) {
+  $('#meeting_date').datepicker();
+***REMOVED***(jQuery));</script>
 ***REMOVED******REMOVED***
 endwhile; // End of the loop.
 get_footer();
