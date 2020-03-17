@@ -77,10 +77,20 @@ while ( have_posts() ) :
 
 ***REMOVED******REMOVED******REMOVED***<div class="form-group form-row">
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="col">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" name="meeting_date" required>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" id="meeting_date" name="meeting_date" required
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['meeting_date'] ) ) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['meeting_date'] . '"';***REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** />
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="col-2">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" name="meeting_time" required>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" id="meeting_time" name="meeting_time" required
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['meeting_time'] ) ) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['meeting_time'] . '"';***REMOVED*****REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** />
 ***REMOVED******REMOVED******REMOVED******REMOVED***</div>
 ***REMOVED******REMOVED******REMOVED***</div>
 
