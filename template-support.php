@@ -34,6 +34,9 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED***case 'surplus':
 ***REMOVED******REMOVED******REMOVED***$description_label = 'Please describe the unused electronic devices you would like to be picked up.';
 ***REMOVED******REMOVED******REMOVED***break;
+***REMOVED******REMOVED***case 'virtual-meeting':
+***REMOVED******REMOVED******REMOVED***$description_label = 'Please describe the virtual meeting and how we can assist you.';
+***REMOVED******REMOVED******REMOVED***break;
 ***REMOVED******REMOVED***default:
 ***REMOVED******REMOVED******REMOVED***$description_label = 'Please describe the issue you are experiencing.';
 ***REMOVED***
@@ -69,11 +72,24 @@ while ( have_posts() ) :
 ***REMOVED***<div class="col pb-1">
 ***REMOVED******REMOVED***<form action="***REMOVED*** echo get_home_url(); ?>/incident/new/" method="post">
 ***REMOVED******REMOVED******REMOVED******REMOVED***<input type="hidden" name="category" id="category" value="***REMOVED*** echo $post->post_name; ?>"/>
-***REMOVED******REMOVED******REMOVED***
+
+***REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'virtual-meeting' == $post->post_name ) : ?>
+
+***REMOVED******REMOVED******REMOVED***<div class="form-group form-row">
+***REMOVED******REMOVED******REMOVED******REMOVED***<div class="col">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" name="meeting_date" required>
+***REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED***<div class="col-2">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" name="meeting_time" required>
+***REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED***</div>
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*** ?>
+
 ***REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'software' == $post->post_name ) : ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="software">Software</label>
-***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="software" name="software" placeholder="Start typing the name of the software" required 
+***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="software" name="software" placeholder="Start typing the name of the software" required
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED***
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['software'] ) ) {
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['software'] . '"';***REMOVED*****REMOVED***
@@ -214,7 +230,7 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</select>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  </div>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="col-sm-3">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" name="room" placeholder="Room" 
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" name="room" placeholder="Room"
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['room'] ) ) {
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['room'] . '"';***REMOVED*****REMOVED***
@@ -239,7 +255,7 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED******REMOVED*****REMOVED*** ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <div class="form-check form-check-inline">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input class="form-check-input" type="radio" name="preferred_contact" id="contact_other" value="other">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" placeholder="Other" id="contact_custom" name="contact_custom" 
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<input type="text" class="form-control" placeholder="Other" id="contact_custom" name="contact_custom"
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['contact_custom'] ) ) {
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['contact_custom'] . '"';***REMOVED*****REMOVED***
@@ -251,7 +267,7 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** if ( 'telecom' != $post->post_name && 'intercom' != $post->post_name && 'surplus' != $post->post_name ) : ?>
 ***REMOVED******REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***  <label for="asset_number">TSD Asset Tag Number&emsp;<span class="text-muted">ex. #####</span></label>
-***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="asset_number" name="asset_number" required 
+***REMOVED******REMOVED******REMOVED******REMOVED***  <input type="text" class="form-control" id="asset_number" name="asset_number" required
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***if ( ! empty( $data['asset_number'] ) ) {
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***echo 'value="' . $data['asset_number'] . '"';***REMOVED*****REMOVED***
@@ -286,7 +302,7 @@ while ( have_posts() ) :
 ***REMOVED******REMOVED******REMOVED***<div class="form-group">
 ***REMOVED******REMOVED******REMOVED******REMOVED***<button type="submit" class="btn btn-tsd">Submit</button>
 ***REMOVED******REMOVED******REMOVED***</div>
-***REMOVED******REMOVED******REMOVED***
+
 ***REMOVED******REMOVED***</form>
 ***REMOVED***</div><!-- .col -->
 ***REMOVED***<div class="col-md-4">
