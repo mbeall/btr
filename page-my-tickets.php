@@ -11,274 +11,132 @@
 ***REMOVED***
 ***REMOVED*** @package Big_Thompson_River
 ***REMOVED***/
+
 session_start();
 
-if (!is_user_logged_in()) {
-***REMOVED***header('Location: ' . wp_login_url( get_permalink() ) );
 ***REMOVED***
-
-***REMOVED***
-***REMOVED*** Search for tickets
+***REMOVED*** If user is not logged in, send user to login and redirect back to current page upon successful login.
 ***REMOVED***/
+if ( ! is_user_logged_in() ) {
+***REMOVED***header( 'Location: ' . wp_login_url( get_permalink() ) );
+***REMOVED***
 
-
-$user = bigt_csm_get_current_user();
+***REMOVED***
+***REMOVED*** Search for tickets where the current user is listed as the Customer
+***REMOVED***/
+$user           = bigt_csm_get_current_user();
+$user_id        = $user->RecID; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+$site_name      = $user->SiteName; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+$user_full_name = $user->FullName; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
 
 $headers = array(
-  'content-type' => 'application/json',
-  'authorization' => 'Bearer ' . bigt_csm_get_token()
+***REMOVED***'content-type'  => 'application/json',
+***REMOVED***'authorization' => 'Bearer ' . bigt_csm_get_token(),
 );
 
 $query = '{
-  "filters": [
-    {
-      "field": {
-        "fieldName": "CustomerRecID",
-        "searchTerm": "'.$user->RecID.'"
-    ***REMOVED*****REMOVED*****REMOVED***
-  ***REMOVED*****REMOVED*****REMOVED***
-  ]
+***REMOVED***"filters": [{
+***REMOVED******REMOVED***"field": {
+***REMOVED******REMOVED******REMOVED***"fieldName": "CustomerRecID",
+***REMOVED******REMOVED******REMOVED***"searchTerm": "' . $user_id . '"
+***REMOVED***
+***REMOVED***]
 ***REMOVED***';
 
-$raw_results = wp_remote_post('https://thompson.cherwellondemand.com/CherwellAPI/api/V1/object/Incident/search?page=1&pageSize=100&api_key='.get_theme_mod('cw_api_key'), array('headers'=>$headers, 'body'=>$query));
+$raw_results = wp_remote_post(
+***REMOVED***'https://thompson.cherwellondemand.com/CherwellAPI/api/V1/object/Incident/search?page=1&pageSize=100&api_key=' . get_theme_mod( 'cw_api_key' ),
+***REMOVED***array(
+***REMOVED******REMOVED***'headers' => $headers,
+***REMOVED******REMOVED***'body'    => $query,
+***REMOVED***)
+);
 
-$body = json_decode($raw_results['body']);
+$body = json_decode( $raw_results['body'] );
 
 
-if (!empty($user->SiteName)) {
-***REMOVED***switch ($user->SiteName) {
-***REMOVED***  case 'Sarah Milner Elementary School':
-***REMOVED******REMOVED***$tech = 'Cortez, Rick A SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Centennial Elementary School':
-***REMOVED******REMOVED***$tech = 'Cortez, Rick A SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Berthoud Elementary School':
-***REMOVED******REMOVED***$tech = 'Morrissey, Eric';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Berthoud High School':
-***REMOVED******REMOVED***$tech = 'Sanchez, Luis A SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'BF Kitchen Elementary School':
-***REMOVED******REMOVED***$tech = 'Cortez, Rick A SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Big Thompson Elementary School':
-***REMOVED******REMOVED***$tech = 'Morrissey, Eric';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Bill Reed Middle School':
-***REMOVED******REMOVED***$tech = 'Scott, Denise M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Carrie Martin Elementary School':
-***REMOVED******REMOVED***$tech = 'Morrissey, Eric';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Conrad Ball Middle School':
-***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Cottonwood Plains Elementary School':
-***REMOVED******REMOVED***$tech = 'Gibbons, Jake D SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Coyote Ridge Elementary School':
-***REMOVED******REMOVED***$tech = 'Rosenberger, Polly P SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Early Childhood Center':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Ferguson High School':
-***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Garfield Elementary School':
-***REMOVED******REMOVED***$tech = 'Rosenberger, Polly P SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Ivy Stockwell Elementary School':
-***REMOVED******REMOVED***$tech = 'Scott, Denise M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Laurene Edmondson Elementary School':
-***REMOVED******REMOVED***$tech = 'Gibbons, Jake D SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Lincoln Elementary School':
-***REMOVED******REMOVED***$tech = 'Morrissey, Eric';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Loveland High School':
-***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Lucile Erwin Middle School':
-***REMOVED******REMOVED***$tech = 'Cole, Suzanne E SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Mary Blair Elementary School':
-***REMOVED******REMOVED***$tech = 'Ruhle, Wachara M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Monroe Elementary School':
-***REMOVED******REMOVED***$tech = 'Cortez, Rick A SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Mountain View High School':
-***REMOVED******REMOVED***$tech = 'Sanchez, Luis A SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Namaqua Elementary School':
-***REMOVED******REMOVED***$tech = 'Ruhle, Wachara M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Ponderosa Elementary School':
-***REMOVED******REMOVED***$tech = 'Gibbons, Jake D SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Thompson Valley High School':
-***REMOVED******REMOVED***$tech = 'Cole, Suzanne E SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Truscott Elementary School':
-***REMOVED******REMOVED***$tech = 'Rosenberger, Polly P SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Turner Middle School':
-***REMOVED******REMOVED***$tech = 'Scott, Denise M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Walt Clark Middle School':
-***REMOVED******REMOVED***$tech = 'Rosenberger, Polly P SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Winona Elementary School':
-***REMOVED******REMOVED***$tech = 'Gibbons, Jake D SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Support Services Center':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Administration':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Facilities':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Van Buren Elementary School':
-***REMOVED******REMOVED***$tech = 'Cole, Suzanne E SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Ferguson High HOPE Program':
-***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Thompson Online Campus':
-***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'LEAP':
-***REMOVED******REMOVED***$tech = 'Sanchez, Luis A SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Community Connections':
-***REMOVED******REMOVED***$tech = 'Sanchez, Luis A SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Loveland Classical':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'NewVision Charter':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Transportation':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'High Plains School':
-***REMOVED******REMOVED***$tech = 'Ruhle, Wachara M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Admin - Community Connections':
-***REMOVED******REMOVED***$tech = 'Sanchez, Luis A SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Support Service - Innovative Technology':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Stansberry Early Childhood':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Lincoln Early Childhood':
-***REMOVED******REMOVED***$tech = 'Morrissey, Eric';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Admin - Special Education':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Harold Ferguson High School':
-***REMOVED******REMOVED***$tech = 'Cordova, Elaine M SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Admin - Learning Services':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Admin - Financial Services':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  case 'Support Service - Innovative Technology':
-***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
-***REMOVED******REMOVED***break;
-***REMOVED***  default:
-***REMOVED******REMOVED***$tech = 'Unassigned';
-***REMOVED***
-***REMOVED*** else {
-***REMOVED***$tech = 'Unassigned';
-***REMOVED***
+$tech = ! empty( $site_name ) ? bigt_get_tech_by_site( $site_name ) : 'Unassigned';
 
-//switch ($body->recordCount) {
-//  case 0 :
-//    $records = 0;
-//    break;
-//  case 1 :
-//    break;
-//  default :
-//    break;
-***REMOVED****REMOVED****REMOVED***
 get_header();
 ?>
+
 <div class="row">
-***REMOVED***<header class="col text-center">
+***REMOVED***<header class="col text-center" id="entry-header">
 ***REMOVED******REMOVED******REMOVED*** the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-***REMOVED***</header><!-- .entry-header -->
+***REMOVED***</header><!-- #entry-header -->
+</div><!-- .row -->
+
+<div class="row mt-3">
+***REMOVED***<div class="col pb-1">
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED***foreach ( array_reverse( $body->records ) as $raw_incident ) {
+***REMOVED******REMOVED******REMOVED***$incident            = json_decode( $raw_incident );
+***REMOVED******REMOVED******REMOVED***$incident_id         = $incident->IncidentID; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+***REMOVED******REMOVED******REMOVED***$i_subcategory       = $incident->Subcategory; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+***REMOVED******REMOVED******REMOVED***$i_status            = $incident->Status; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+***REMOVED******REMOVED******REMOVED***$i_created_date_time = $incident->CreatedDateTime; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+***REMOVED******REMOVED******REMOVED***$i_description       = explode( '-----', $incident->Description ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+
+***REMOVED******REMOVED******REMOVED***switch ( $incident->Status ) { // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+***REMOVED******REMOVED******REMOVED******REMOVED***case 'Closed':
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***$status_class = 'light';
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***break;
+***REMOVED******REMOVED******REMOVED******REMOVED***case 'Resolved':
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***$status_class = 'light';
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***break;
+***REMOVED******REMOVED******REMOVED******REMOVED***case 'Pending':
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***$status_class = 'info';
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***break;
+***REMOVED******REMOVED******REMOVED******REMOVED***default:
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***$status_class = 'tsd';
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***break;
+***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED***?>
+
+***REMOVED******REMOVED******REMOVED***<div class="card mb-1">
+***REMOVED******REMOVED******REMOVED******REMOVED***<div class="card-header">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="row">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="col-2">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<a class="btn btn-***REMOVED*** echo esc_attr( $status_class ); ?>" href="***REMOVED*** echo esc_url( get_home_url( '/incident/view/?csmi=' . esc_attr( $incident_id ) ) ); ?>" >***REMOVED*** echo esc_html( $incident_id ); ?></a>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .col-2 -->
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="col">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h5 class="mt-2" data-toggle="collapse" data-target="#collapse-***REMOVED*** echo esc_attr( $incident_id ); ?>">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** echo esc_html( $i_subcategory ); ?>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</h5>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .col -->
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="col-1">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<i class="fa fa-sort-down mt-2" data-toggle="collapse" data-target="#collapse-***REMOVED*** echo esc_attr( $incident_id ); ?>"></i>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .col-1 -->
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .row -->
+***REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .card-header -->
+
+***REMOVED******REMOVED******REMOVED******REMOVED***<div id="collapse-***REMOVED*** echo esc_attr( $incident_id ); ?>" class="collapse">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card-body">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p class="card-text">***REMOVED*** echo esc_html( $i_description[0] ); ?></p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .card-body -->
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card-footer text-muted">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="row">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="col text-left"><strong>Status</strong>:***REMOVED*****REMOVED*** echo esc_html( $i_status ); ?></div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="col text-right">Created at***REMOVED*****REMOVED*** echo esc_html( $i_created_date_time ); ?></div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .row -->
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .card-footer -->
+***REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .collapse -->
+***REMOVED******REMOVED******REMOVED***</div><!-- .card -->
+***REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*** // End foreach. ?>
 ***REMOVED***</div>
-    <div class="row mt-3">
-      <div class="col pb-1">
-  ***REMOVED*****REMOVED*****REMOVED*****REMOVED*****REMOVED*****REMOVED*****REMOVED*** foreach (array_reverse($body->records) as $raw_incident) {
-          $incident = json_decode($raw_incident);
-          $description = explode( '-----', $incident->Description );
-***REMOVED***switch ($incident->Status) {
-***REMOVED******REMOVED***case 'Closed' :
-***REMOVED******REMOVED******REMOVED***$status_class = 'light';
-***REMOVED******REMOVED******REMOVED***break;
-***REMOVED******REMOVED***case 'Resolved' :
-***REMOVED******REMOVED******REMOVED***$status_class = 'light';
-***REMOVED******REMOVED******REMOVED***break;
-***REMOVED******REMOVED***case 'Pending' :
-***REMOVED******REMOVED******REMOVED***$status_class = 'info';
-***REMOVED******REMOVED******REMOVED***break;
-***REMOVED******REMOVED***default :
-***REMOVED******REMOVED******REMOVED***$status_class = 'tsd';
-***REMOVED******REMOVED******REMOVED***break;
-***REMOVED***
-***REMOVED******REMOVED***  ?>
-        <div class="card mb-1">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-2"><a class="btn btn-***REMOVED*** echo $status_class; ?>" href="***REMOVED*** echo get_home_url(); ?>/incident/view/?csmi=***REMOVED*** echo $incident->IncidentID; ?>" >***REMOVED*** echo $incident->IncidentID; ?></a></div>
-              <div class="col"><h5 class="mt-2" data-toggle="collapse" data-target="#collapse-***REMOVED*** echo $incident->IncidentID; ?>">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*****REMOVED*****REMOVED*** echo $incident->Subcategory; ?>
-***REMOVED******REMOVED******REMOVED******REMOVED***  </h5></div>
-              <div class="col-1"><i class="fa fa-sort-down mt-2" data-toggle="collapse" data-target="#collapse-***REMOVED*** echo $incident->IncidentID; ?>"></i></div>
-            </div>
-          </div>
-          <div id="collapse-***REMOVED*** echo $incident->IncidentID; ?>" class="collapse">
-            <div class="card-body">
-              <p class="card-text">***REMOVED*** echo $description[0]; ?></p>
-            </div>
-            <div class="card-footer text-muted">
-***REMOVED******REMOVED******REMOVED******REMOVED***<div class="row">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="col text-left"><strong>Status</strong>:***REMOVED*****REMOVED*** echo $incident->Status; ?></div>
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="col text-right">Created at***REMOVED*****REMOVED*** echo $incident->CreatedDateTime; ?></div>
-***REMOVED******REMOVED******REMOVED******REMOVED***</div>
-            </div>
-          </div>
-        </div>
-  ***REMOVED*****REMOVED*****REMOVED*****REMOVED*****REMOVED*****REMOVED*****REMOVED******REMOVED*****REMOVED*** ?>
-      </div>
-      <div class="col-md-3">
-        <h6 style="font-variant:all-small-caps;">Client</h6>
-        <p><strong>***REMOVED*** echo $user->FullName; ?></strong>
-        <br>***REMOVED*** echo $user->SiteName; ?></p>
 
-        <h6 style="font-variant:all-small-caps;">Primary Technician</h6>
-        <p><strong>***REMOVED*** echo $tech; ?></strong>
-        <br>Client Services</p>
-      </div>
-    </div><!-- .row -->
+***REMOVED***<div class="col-md-3">
+***REMOVED******REMOVED***<h6 style="font-variant:all-small-caps;">Client</h6>
+***REMOVED******REMOVED***<p><strong>***REMOVED*** echo esc_html( $user_full_name ); ?></strong>
+***REMOVED******REMOVED***<br>***REMOVED*** echo esc_html( $site_name ); ?></p>
 
-<div class="row">
-***REMOVED***
-</div>
-***REMOVED***
+***REMOVED******REMOVED***<h6 style="font-variant:all-small-caps;">Primary Technician</h6>
+***REMOVED******REMOVED***<p><strong>***REMOVED*** echo esc_html( $tech ); ?></strong>
+***REMOVED******REMOVED***<br>Client Services</p>
+***REMOVED***</div>
+</div><!-- .row -->
 
 ***REMOVED***
 get_footer();
