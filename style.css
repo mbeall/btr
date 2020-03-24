@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Thompson School District
 Author URI: http://underscores.me/
 Description: A WordPress theme for the Thompson School District ITS Help Desk and other Innovative Technology Services resources.
-Version: 1.0.0a
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: bigt
@@ -920,4 +920,131 @@ a.text-orange:focus {
 
 .ui-helper-hidden-accessible {
 ***REMOVED***display: none;
+***REMOVED***
+.ui-datepicker {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+***REMOVED***
+
+.ui-datepicker > hr {
+  margin-right: 0;
+  margin-left: 0;
+***REMOVED***
+
+.ui-datepicker-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+***REMOVED***
+
+.ui-datepicker-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+***REMOVED***
+
+.ui-datepicker-calendar {
+  width: 100%;
+  color: #212529;
+***REMOVED***
+
+.ui-datepicker-calendar th,
+.ui-datepicker-calendar td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+***REMOVED***
+
+.ui-datepicker-calendar thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+***REMOVED***
+
+.ui-datepicker-calendar tbody + tbody {
+  border-top: 2px solid #dee2e6;
+***REMOVED***
+
+.ui-datepicker-title {
+***REMOVED***text-align: center!important;
+***REMOVED***margin-bottom: 0!important;
+***REMOVED***font-weight: 500;
+***REMOVED***line-height: 1.2;
+***REMOVED***
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+***REMOVED***position: absolute;
+***REMOVED***top: 2px;
+***REMOVED***width: 1.8em;
+***REMOVED***height: 1.8em;
+***REMOVED***
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+***REMOVED***top: 1px;
+***REMOVED***
+.ui-datepicker .ui-datepicker-prev {
+***REMOVED***left: 2px;
+***REMOVED***
+.ui-datepicker .ui-datepicker-next {
+***REMOVED***right: 2px;
+***REMOVED***
+.ui-datepicker .ui-datepicker-prev-hover {
+***REMOVED***left: 1px;
+***REMOVED***
+.ui-datepicker .ui-datepicker-next-hover {
+***REMOVED***right: 1px;
+***REMOVED***
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+***REMOVED***display: block;
+***REMOVED***position: absolute;
+***REMOVED***margin-top: 0.75em;
+***REMOVED***
+.ui-datepicker .ui-datepicker-prev span {
+***REMOVED***margin-left: 1em;
+***REMOVED***
+.ui-datepicker .ui-datepicker-next span {
+***REMOVED***margin-right: 1em;
+***REMOVED***
+.ui-datepicker .ui-datepicker-title {
+***REMOVED***margin: 0 2.3em;
+***REMOVED***line-height: 1.8em;
+***REMOVED***text-align: center;
+***REMOVED***
+.ui-datepicker .ui-datepicker-title select {
+***REMOVED***font-size: 1em;
+***REMOVED***margin: 1px 0;
+***REMOVED***
+.ui-icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+***REMOVED***
+.ui-icon-circle-triangle-w {
+***REMOVED***visibility: hidden;
+***REMOVED***
+.ui-icon-circle-triangle-w::before {
+***REMOVED***font-family: "FontAwesome";
+***REMOVED***font-weight: 900;
+***REMOVED***content: "\f137";
+***REMOVED***visibility: visible;
+***REMOVED***
+.ui-icon-circle-triangle-e {
+***REMOVED***visibility: hidden;
+***REMOVED***
+.ui-icon-circle-triangle-e::before {
+***REMOVED***font-family: "FontAwesome";
+***REMOVED***font-weight: 900;
+***REMOVED***content: "\f138";
+***REMOVED***visibility: visible;
 ***REMOVED***
