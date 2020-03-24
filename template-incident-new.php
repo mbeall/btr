@@ -19,7 +19,12 @@ if (false === $csm_user) {
 
 $mbui = uniqid();
 
-$site = !empty($_POST['site']) ? filter_var($_POST['site'], FILTER_SANITIZE_STRING) : 'Unassigned';
+if ('virtual-meeting' == $_POST['category']) {
+***REMOVED***$site = 'Virtual';
+***REMOVED*** else {
+***REMOVED***$site = !empty($_POST['site']) ? filter_var($_POST['site'], FILTER_SANITIZE_STRING) : 'Unassigned';
+***REMOVED***
+
 $description = !empty($_POST['description']) ? filter_var( $_POST['description'], FILTER_SANITIZE_STRING ) : 'No description specified by user';
 
 $urgency = (!empty($_POST['urgency']) && 'true' == $_POST['urgency']) ? true : false;
@@ -52,6 +57,9 @@ if (!empty($_POST['category'])) {
 ***REMOVED******REMOVED***case 'surplus':
 ***REMOVED******REMOVED***  $service = array( 'Removal', 'Removal' );
 ***REMOVED******REMOVED***  break;
+***REMOVED******REMOVED***case 'virtual-meeting':
+***REMOVED******REMOVED***  $service = array( 'New Presentation', 'New Presentation Incident' );
+***REMOVED******REMOVED***  break;
 ***REMOVED******REMOVED***default:
 ***REMOVED******REMOVED***  $service = array( 'New Computer', 'New Computer Incident' );
 ***REMOVED******REMOVED***  break;
@@ -83,6 +91,8 @@ switch ($_POST['category']) {
 ***REMOVED***case 'intercom':
 ***REMOVED***  $priority = $priority - 3;
 ***REMOVED***  break;
+***REMOVED***case 'virtual-meeting':
+***REMOVED******REMOVED***$priority = 5;
 ***REMOVED***default:
 ***REMOVED***  $priority = $priority - 0;
 ***REMOVED***  break;
@@ -254,15 +264,29 @@ if (!empty($site)) {
 ***REMOVED******REMOVED***$tech = 'Beall, Matt B SSC';
 ***REMOVED******REMOVED***break;
 ***REMOVED***  default:
-***REMOVED******REMOVED***$tech = 'Unassigned';
+***REMOVED******REMOVED***if ('virtual-meeting' == $_POST['category']) {
+***REMOVED******REMOVED******REMOVED***$tech = 'Finson, Rob D SSC';
+***REMOVED*** else {
+***REMOVED******REMOVED******REMOVED***$tech = 'Unassigned';
+***REMOVED***
 ***REMOVED***
 ***REMOVED*** else {
-***REMOVED***$tech = 'Unassigned';
+***REMOVED***if ('virtual-meeting' == $_POST['category']) {
+***REMOVED******REMOVED***$tech = 'Finson, Rob D SSC';
+***REMOVED*** else {
+***REMOVED******REMOVED***$tech = 'Unassigned';
+***REMOVED***
 ***REMOVED***
 
 $description = $description . '<br>-----<br>This incident was submitted';
 if (!empty($_POST['asset_number'])) {
   $description = $description . ' about asset ' . filter_var( $_POST['asset_number'], FILTER_SANITIZE_STRING );
+***REMOVED***
+if (!empty($_POST['meeting_date'])) {
+  $description = $description . ' about a virtual meeting taking place on ' . filter_var( $_POST['meeting_date'], FILTER_SANITIZE_STRING );
+***REMOVED***if (!empty($_POST['meeting_time'])) {
+***REMOVED******REMOVED***$description = $description . ' at ' . filter_var( $_POST['meeting_time'], FILTER_SANITIZE_STRING );
+***REMOVED***
 ***REMOVED***
 if (!empty($_POST['room'])) {
 ***REMOVED***$room = filter_var($_POST['room'], FILTER_SANITIZE_STRING);
@@ -294,12 +318,14 @@ $headers = array(
 
 $_service = ('Removal' == $category) ? 'Removal' : 'New Incident';
 
+$team = ('virtual-meeting' == $_POST['category']) ? 'Audio Visual' : 'Client Services';
+
 $data = array(
   'Customer ID' => $csm_user->RecID,
   'createdBy' => $csm_user->FullName,
   'createdByID' => $csm_user->RecID,
   'ownedBy' => $tech,
-  'ownedByTeam' => 'Client Services',
+  'ownedByTeam' => $team,
   'description' => $description,
   'priority' => $priority,
   'source' => 'ITS Help Desk',

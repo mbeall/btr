@@ -28,6 +28,19 @@ get_header();
 ***REMOVED******REMOVED*** bigt_post_thumbnail(); ?>
 
 ***REMOVED***<div class="entry-content">
+***REMOVED***
+***REMOVED***<div class="row text-center mt-3">
+***REMOVED******REMOVED***<div class="col pb-1">
+***REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED***<div class="card text-white bg-info h-100">
+***REMOVED******REMOVED******REMOVED***  <a class="card-body cw-link stretched-link" href="***REMOVED*** echo get_home_url(); ?>/support/virtual-meeting/">
+***REMOVED******REMOVED******REMOVED******REMOVED***<i class="fas fa-comments fa-3x pt-1 pb-3"></i>
+***REMOVED******REMOVED******REMOVED******REMOVED***<h3 class="card-text">Virtual Meeting Technology Support</h3>
+***REMOVED******REMOVED******REMOVED******REMOVED***<p class="card-text">Request support for setting up a virtual meeting</p>
+***REMOVED******REMOVED******REMOVED***  </a>
+***REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED***</div>
+***REMOVED***</div>
 ***REMOVED******REMOVED***
     <div class="row text-center mt-3">
       <div class="col pb-1">
