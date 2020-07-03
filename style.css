@@ -652,6 +652,21 @@ a:hover,
   background-color: #29297c;
   border-color: #262673;
 ***REMOVED***
+.btn-purple {
+  color: #fff;
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+***REMOVED***
+.btn-outline-purple {
+  color: #6f42c1;
+  border-color: #6f42c1;
+***REMOVED***
+.btn-purple:hover,
+.btn-outline-purple:hover {
+  color: #fff;
+  background-color: #59339d;
+  border-color: #59339d;
+***REMOVED***
 .jumbotron-danger {
   color: #721c24;
   background-color: #f8d7da;
