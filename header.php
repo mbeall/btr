@@ -49,7 +49,7 @@ $user_data = get_userdata( get_current_user_id() );
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i>***REMOVED*****REMOVED*** echo esc_html( $user_data->display_name ); ?></a>
 
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="dropdown-menu" aria-labelledby="current_user">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<a class="dropdown-item" href="***REMOVED*** echo esc_url( get_home_url( '/my-tickets' ) ); ?>">View Tickets</a>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<a class="dropdown-item" href="***REMOVED*** echo esc_url( get_home_url() . '/my-tickets' ); ?>">View Tickets</a>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<a class="dropdown-item" href="***REMOVED*** echo esc_url( wp_logout_url() ); ?>">Logout</a>
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div><!-- .dropdown-menu -->
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</li><!-- .nav-item .dropdown -->
@@ -73,7 +73,7 @@ $user_data = get_userdata( get_current_user_id() );
 ***REMOVED******REMOVED******REMOVED******REMOVED*** Check if current page is the Front Page or a 404 error page.
 ***REMOVED******REMOVED******REMOVED******REMOVED*** If it is, display the TSD logo at the top of the page.
 ***REMOVED******REMOVED******REMOVED******REMOVED***/
-***REMOVED******REMOVED******REMOVED***if ( is_front_page() || is_404() ) :
+***REMOVED******REMOVED******REMOVED***if ( is_front_page() || is_404() || is_page( 80 ) ) :
 ***REMOVED******REMOVED******REMOVED******REMOVED***?>
 
 ***REMOVED******REMOVED******REMOVED***<div class="container text-center">
